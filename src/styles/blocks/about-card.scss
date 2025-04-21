@@ -1,0 +1,44 @@
+.about-card {
+	background-color: $color-card;
+	border-radius: 10px;
+	padding: 38px 30px;
+
+	&--dark {
+		display: flex;
+		flex-direction: column;
+		gap: 33px;
+		background-color: $color-main;
+		color: $white;
+	}
+
+	&__num {
+		font-size: 50px;
+	}
+
+	&__text {
+		font-size: 18px;
+
+		p + p {
+			margin-top: 23px;
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 31px;
+		margin-bottom: 44px;
+
+		&--column {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 21px;
+			margin-bottom: 35px;
+		}
+
+		span {
+			font-size: 24px;
+			font-weight: 500;
+		}
+	}
+}

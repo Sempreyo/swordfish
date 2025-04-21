@@ -1,0 +1,56 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Swordfish'
+		};
+
+block main
+	section.hero
+		.container.hero__container
+			.hero__content
+				+title('<span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений', 'hero__title', 'h1')
+				.hero__text
+					p.
+						В эпоху тотальной цифровизации мобильные приложения стали неотъемлемой частью бизнес-процессов в&nbsp;критически важных секторах
+						экономики, таких как финансы, здравоохранение, образование и&nbsp;корпоративные сервисы. С&nbsp;увеличением числа пользователей
+						возрастает и&nbsp;количество угроз, связанных с&nbsp;безопасностью мобильного ПО.
+					p.
+						Компания AppSec Solutions провела ежегодное исследование защищенности мобильных приложений российских разработчиков.
+			.hero__image-wrapper
+				+picture('hero', 'png', '', '')
+	section.about
+		.container
+			+title('Об исследовании', 'about__title')
+			+text('Эксперты проверили 1&nbsp;868 мобильных приложений российских разработчиков из&nbsp;18 категорий — от&nbsp;финтеха и&nbsp;онлайн-ритейла ' +
+			'до&nbsp;здравоохранения, образования и&nbsp;корпоративных сервисов.', 'about__text')
+			.about__cards
+				.about-card.about-card--dark
+					.about-card__stat
+						.about-card__num 1 868
+						.about-card__text приложений Android
+					.about-card__stat
+						.about-card__num 18
+						.about-card__text категорий приложений
+					.about-card__stat
+						.about-card__num 57
+						.about-card__text видов уязвимостей
+				.about-card
+					.about-card__title
+						+icon('about1')(width='72', height='72')
+						span Методология
+					.about-card__text
+						p.
+							Тестирование проводилась методом «черного ящика», без доступа к&nbsp;исходному коду, что&nbsp;максимально приближает
+							его к&nbsp;реальным&nbsp;условиям атаки.
+						p.
+							Эксперты оценивали входящие в&nbsp;ТОП-100 каждой категории приложения на&nbsp;57 видов уязвимостей и&nbsp;исследовали
+							возможные векторы&nbsp;атак.
+				.about-card
+					.about-card__title.about-card__title--column
+						+picture('about2', 'png', '', '')
+						span Платформа <br> Стингрей
+					.about-card__text.
+						Безопасность приложений проверялась с&nbsp;помощью Стингрей — платформы автоматизированного анализа
+						защищенности мобильных приложений.

@@ -1,0 +1,30 @@
+.header {
+	$parent: &;
+
+	position: relative;
+	padding: 53px 0 0;
+	background-color: $color-main;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		width: 45%;
+	}
+
+	&__logo {
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

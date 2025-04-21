@@ -1,0 +1,10 @@
+.article {
+	&__home {
+		color: $white !important;
+		margin-top: 40px;
+
+		@include max(ti) {
+			margin-top: 20px;
+		}
+	}
+}
