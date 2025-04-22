@@ -1,0 +1,100 @@
+.video {
+	$parent: &;
+
+	padding: 55px 0 0;
+	overflow: hidden;
+
+	&__text {
+		margin-top: 37px;
+
+		p:last-child {
+			padding-left: 100px;
+		}
+	}
+
+	&__iframe-wrapper {
+		position: relative;
+		max-width: 947px;
+		margin-top: 40px;
+	}
+
+	&__pattern {
+		position: absolute;
+		top: 50%;
+		left: calc(100% - 35px);
+		transform: translateY(-50%);
+		width: 389px;
+		height: 326px;
+	}
+
+	&__iframe {
+		position: relative;
+		border-radius: 15px;
+		overflow: hidden;
+		width: 100%;
+		aspect-ratio: 15/8;
+
+		video {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__poster {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		background-color: #080d44;
+		cursor: pointer;
+
+		&:hover #{$parent}__play {
+			opacity: 0.7;
+		}
+
+		&.hide {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 59px;
+		height: 59px;
+		border-radius: 50%;
+		background-color: $white;
+		transition: opacity 0.3s ease;
+
+		&::before,
+		&::after {
+			position: absolute;
+			inset: 10px;
+			content: "";
+			display: block;
+			border-radius: 50%;
+			border: 2px solid rgba($white, 0.2);
+		}
+
+		&::before {
+			animation: pulse 2.5s linear infinite;
+			animation-delay: 2s;
+		}
+
+		&::after {
+			animation: pulse 2.5s linear infinite;
+		}
+	}
+}

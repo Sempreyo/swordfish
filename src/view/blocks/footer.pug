@@ -1,2 +1,19 @@
 footer.footer
-	.container
+	.container.footer__container
+		.footer__adv
+			span Реклама
+			.footer__adv-tooltip
+				.footer__adv-tooltip-block.
+					erid: XXXXXXXXXX <br> Рекламодатель: ООО XXX <br> ИНН/ОГРН: 0000000000/0000000000000 <br> Сайт:
+					<a href="http://www.test.ru/" target="_blank">http://www.test.ru/</a>
+		.footer__socials.socials
+			a.socials__item(href='#', target='_blank')
+				+picture('social-web', 'png', '', '')
+				span appsec.global
+			a.socials__item(href='#', target='_blank')
+				+icon('tg')(width='14', height='12')
+				span @appsecsolutions
+			a.socials__item(href='#', target='_blank')
+				+icon('rutube')(width='13', height='14')
+				span rutube.ru
+		div

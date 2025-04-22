@@ -1,41 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const slideshowCarousel = document.querySelectorAll(".carousel__slider");
+	const interviewCarousel = document.querySelectorAll(".interview__slider");
 
-	if (slideshowCarousel.length > 0) {
-		slideshowCarousel.forEach(el => {
-			const slideshowCarouselNext = el.nextElementSibling.querySelector(".swiper-btn-next");
-			const slideshowCarouselPrev = el.nextElementSibling.querySelector(".swiper-btn-prev");
+	if (interviewCarousel.length > 0) {
+		interviewCarousel.forEach(el => {
+			const interviewCarouselNext = el.querySelector(".swiper-btn-next");
+			const interviewCarouselPrev = el.querySelector(".swiper-btn-prev");
 
 			const slider = new Swiper(el, {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				autoHeight: true,
 				navigation: {
-					nextEl: slideshowCarouselNext,
-					prevEl: slideshowCarouselPrev,
+					nextEl: interviewCarouselNext,
+					prevEl: interviewCarouselPrev,
 				}
 			});
 		});
 	}
 
-	const articlesCarousel = document.querySelectorAll(".other-articles__slider");
+	const opinionCarousel = document.querySelectorAll(".opinion__slider");
 
-	if (articlesCarousel.length > 0) {
-		articlesCarousel.forEach(el => {
-			const articlesCarouselNext = el.nextElementSibling.querySelector(".swiper-btn-next");
-			const articlesCarouselPrev = el.nextElementSibling.querySelector(".swiper-btn-prev");
+	if (opinionCarousel.length > 0) {
+		opinionCarousel.forEach(el => {
+			const opinionCarouselPagination = el.querySelector(".swiper-pagination");
 
 			const slider = new Swiper(el, {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				navigation: {
-					nextEl: articlesCarouselNext,
-					prevEl: articlesCarouselPrev,
-				},
-				breakpoints: {
-					576: {
-						slidesPerView: 2,
-					}
+				slidesPerView: "auto",
+				initialSlide: 1,
+				centeredSlides: true,
+				spaceBetween: 50,
+				pagination: {
+					el: opinionCarouselPagination,
+					clickable: true
 				}
 			});
 		});

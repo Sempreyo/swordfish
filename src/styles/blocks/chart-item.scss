@@ -1,0 +1,76 @@
+.chart-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__circle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		width: 241px;
+		height: 241px;
+		border-radius: 50%;
+
+		&::before,
+		&::after {
+			position: absolute;
+			z-index: 1;
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			border: 8px solid #eaf4fe;
+		}
+
+		&::before {
+			inset: 0;
+		}
+
+		&::after {
+			inset: 0;
+		}
+
+		span {
+			position: relative;
+			color: $color-blue;
+			font-size: 40px;
+			font-weight: 600;
+		}
+	}
+
+	&__filler {
+		position: absolute;
+		inset: 0;
+		--p: 10%;
+		background: conic-gradient(#1f4cca calc(-60% + var(--p)), #1f4cca var(--p), #eaf4fe 0);
+		border-radius: 50%;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			content: "";
+			display: block;
+			width: 75%;
+			height: 75%;
+			border-radius: 50%;
+			background-color: $white;
+			border: 8px solid #eaf4fe;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.18;
+		text-align: center;
+		margin-top: 30px;
+
+		span {
+			color: $color-blue;
+			font-weight: 600;
+		}
+	}
+}

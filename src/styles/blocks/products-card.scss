@@ -1,0 +1,28 @@
+.products-card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: $color-card;
+	border-radius: 10px;
+	padding: 30px 30px 38px;
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+
+	&__text {
+		font-size: 10px;
+		border-top: 1px solid $color-main;
+		padding-top: 19px;
+		margin-top: 16px;
+		margin-bottom: 23px;
+	}
+
+	&__more {
+		color: $color-link;
+		font-size: 10px;
+		font-weight: 600;
+		margin-top: auto;
+	}
+}

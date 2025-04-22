@@ -8,4 +8,8 @@
 	@include max(t) {
 		padding: 0 15px;
 	}
+
+	&--big {
+		max-width: 1400px;
+	}
 }

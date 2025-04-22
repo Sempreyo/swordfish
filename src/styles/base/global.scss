@@ -61,7 +61,7 @@ main {
 }
 
 a {
-	color: $white;
+	color: $color-main;
 	text-decoration: none;
 }
 
@@ -160,12 +160,12 @@ ol {
 
 .token-info-item {
 	display: block;
-	color: $white;
+	color: $color-main;
 	font-size: 12px;
 	line-height: 1.2;
 
 	a {
-		color: $white;
+		color: $color-main;
 		text-decoration: underline;
 
 		&:hover {
@@ -191,14 +191,7 @@ ol {
 	z-index: 10;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	gap: 10px;
-	pointer-events: none;
-
-	@include max(tl) {
-		justify-content: center;
-		gap: 20px;
-	}
+	gap: 4px;
 
 	.swiper-btn-prev,
 	.swiper-btn-next {
@@ -206,21 +199,16 @@ ol {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 45px;
-		height: 37px;
-		background-color: $color-button;
-		border-radius: 10px 6px 10px 6px;
-		transform: skewX(-8deg);
+		width: 70px;
+		height: 70px;
+		padding: 10px;
+		background-color: $color-blue;
+		border-radius: 10px;
 		cursor: pointer;
-		pointer-events: auto;
 		transition: background-color 0.3s ease;
 
 		&:hover {
-			background-color: rgba($color-button, 0.7);
-		}
-
-		svg {
-			transform: skewX(8deg);
+			background-color: rgba($color-blue, 0.7);
 		}
 	}
 
@@ -232,28 +220,29 @@ ol {
 
 /* Swiper pagination */
 .swiper-pagination {
-	display: none;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
 	position: absolute;
 	top: unset !important;
-	bottom: 16px !important;
+	bottom: 5px !important;
 	z-index: 12;
 
-	@include max(tl) {
-		display: flex;
-	}
-
 	.swiper-pagination-bullet {
-		width: 20px;
-		height: 20px;
-		opacity: 0.5;
-		background-color: $white;
+		width: 10px;
+		height: 10px;
+		background-color: $color-bullet;
+		opacity: 1;
 		margin: 0 !important;
+		transition: 0.3s ease;
+
+		&:hover {
+			opacity: 0.7;
+		}
 
 		&-active {
-			opacity: 1;
+			transform: scale(1.5);
 		}
 	}
 }

@@ -3,5 +3,76 @@
 
 	position: relative;
 	z-index: 10;
-	padding: 70px 0 40px;
+	padding: 52px 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__adv {
+		display: inline-flex;
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			#{$parent}__adv-tooltip {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			color: $color-main;
+			font-size: 12px;
+
+			&::before {
+				content: "";
+				width: 5px;
+				height: 5px;
+				background-color: $color-main;
+			}
+		}
+	}
+
+	&__adv-tooltip {
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		width: 270px;
+		border: 2px solid $color-button;
+		background: rgba($black, 0.7);
+		backdrop-filter: blur(11px);
+		border-radius: 2px;
+		padding: 20px 10px;
+		opacity: 0;
+		pointer-events: none;
+		transition: 0.3s ease;
+	}
+
+	&__adv-tooltip-block {
+		color: $white;
+		font-size: 12px;
+		line-height: 1.2;
+
+		a {
+			color: $white;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		& + #{$parent}__adv-tooltip-block {
+			margin-top: 12px;
+			padding-top: 12px;
+			border-top: 1px solid $white;
+		}
+	}
 }

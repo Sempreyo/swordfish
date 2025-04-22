@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	/*const buttonUp = document.querySelector(".button-up");
+	const buttonUp = document.querySelector(".button-up");
 
 	const initButtonUp = () => {
 		if (buttonUp) {
@@ -23,5 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
-	initButtonUp();*/
+	initButtonUp();
 });

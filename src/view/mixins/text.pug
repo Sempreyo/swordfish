@@ -1,5 +1,6 @@
 mixin text(text, className, additionalText)
-	.text(class=className)&attributes(attributes)
+	- let classModify = additionalText ? className + ' text--columns' : className
+	.text(class=classModify)&attributes(attributes)
 		p!= text
 		if additionalText
 			p!= additionalText

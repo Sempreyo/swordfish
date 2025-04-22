@@ -2,15 +2,15 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 155px;
+	max-width: 260px;
 	width: 100%;
-	padding: 10px 20px;
+	padding: 20px;
 	border-radius: 10px;
 	box-sizing: border-box;
 	background-color: $color-button;
 	color: $white;
-	font-size: 14px;
-	font-weight: 700;
+	font-size: 15px;
+	font-weight: 600;
 	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -18,5 +18,14 @@
 
 	&:hover {
 		background-color: rgba($color-button, 0.7);
+	}
+
+	&--white {
+		background-color: $white;
+		color: $color-main;
+
+		&:hover {
+			background-color: rgba($white, 0.7);
+		}
 	}
 }

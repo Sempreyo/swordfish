@@ -1,0 +1,96 @@
+.apps {
+	$parent: &;
+
+	padding: 130px 0 0;
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 70px;
+	}
+
+	&__text {
+		font-size: 16px;
+		margin-top: 12px;
+		padding-left: 8px;
+	}
+
+	&__button {
+		margin-top: 22px;
+	}
+
+	&__block {
+		&--offset-big {
+			margin-top: 115px;
+		}
+
+		&--offset-small {
+			margin-top: 16px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	&__rows {
+		margin-top: 30px;
+	}
+
+	&__row {
+		display: flex;
+		gap: 30px;
+
+		& + #{$parent}__row {
+			margin-top: 26px;
+		}
+
+		&--2 {
+			padding-left: 36px;
+		}
+
+		&--4 {
+			justify-content: flex-end;
+		}
+
+		&--5 {
+			justify-content: flex-end;
+			margin-right: 58px;
+		}
+
+		&--6 {
+			justify-content: flex-end;
+			margin-right: 126px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100px;
+		height: 100px;
+		border-radius: 10px;
+		background-color: $color-blue;
+
+		svg {
+			width: 60px;
+			height: 60px;
+		}
+	}
+
+	&__description {
+		max-width: 100px;
+		font-size: 12px;
+		line-height: 1.25;
+		text-align: center;
+		margin-top: 11px;
+	}
+}

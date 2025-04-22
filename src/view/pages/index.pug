@@ -45,7 +45,7 @@ block main
 							Тестирование проводилась методом «черного ящика», без доступа к&nbsp;исходному коду, что&nbsp;максимально приближает
 							его к&nbsp;реальным&nbsp;условиям атаки.
 						p.
-							Эксперты оценивали входящие в&nbsp;ТОП-100 каждой категории приложения на&nbsp;57 видов уязвимостей и&nbsp;исследовали
+							Эксперты оценивали входящие в&nbsp;<b>ТОП-100</b> каждой категории приложения на&nbsp;57 видов уязвимостей и&nbsp;исследовали
 							возможные векторы&nbsp;атак.
 				.about-card
 					.about-card__title.about-card__title--column
@@ -54,3 +54,378 @@ block main
 					.about-card__text.
 						Безопасность приложений проверялась с&nbsp;помощью Стингрей — платформы автоматизированного анализа
 						защищенности мобильных приложений.
+	section.digit
+		.container
+			+title('Ключевые цифры 2024 года', 'digit__title')
+			+text('<b>29 952</b> уязвимости было обнаружено в <b>1 868</b> приложениях. <b>88,6%</b> мобильных приложений на платформе ' +
+			'Android имеют уязвимости высокого и критического уровня. Они могут быть использованы для взлома данных, кражи финансовой ' +
+			'информации и доступа к закрытым корпоративным системам. <br> Этот показатель на <b>33%</b> выше, чем в 2023 году.', 'digit__text')
+			.digit__chart.digit-chart
+				.digit-chart__item.digit-chart__item--1
+					span 84%
+				.digit-chart__item.digit-chart__item--2
+					span 33%
+				.digit-chart__item.digit-chart__item--3
+					span 88,6%
+				.digit-chart__item.digit-chart__item--4
+					span 90%
+				.digit-chart__item.digit-chart__item--5
+					span 80%
+	section.chart
+		.container
+			+title('Уязвимости по уровню критичности', 'chart__title')
+			+text('Большинство просканированных приложений содержит уязвимости, которые снижают уровень безопасности ПО&nbsp;и&nbsp;могут стать ' +
+			'входными точками для хакерских атак.',
+				'chart__text',
+				'Выделяют уровни критичности уязвимости — степень серьезности проблем безопасности с учетом потенциальных рисков.')
+			.chart__items
+				.chart__item.chart-item
+					.chart-item__circle
+						.chart-item__filler
+						span 83
+					.chart-item__text.
+						<span>Критический уровень</span> — самые опасные уязвимости: злоумышленники могут проэксплуатировать их без&nbsp;доступа к&nbsp;аккаунту
+						или участия пользователя и&nbsp;заполучить контроль над системой
+				.chart__item.chart-item
+					.chart-item__circle
+						.chart-item__filler
+						span 8 887
+					.chart-item__text.
+						<span>Высокий уровень</span> — уязвимости, которые угрожают безопасности данных: могут привести к&nbsp;их утечке, потере или блокировке
+				.chart__item.chart-item
+					.chart-item__circle
+						.chart-item__filler
+						span 10 460
+					.chart-item__text.
+						<span>Средний уровень</span> — проблемы, которыми злоумышленникам нелегко воспользоваться, но при определенных условиях они
+						также могут поставить под угрозу конфиденциальность, целостность или доступность данных
+				.chart__item.chart-item
+					.chart-item__circle
+						.chart-item__filler
+						span 4 383
+					.chart-item__text.
+						<span>Низкий уровень</span> — уязвимости с&nbsp;минимальными рисками. Их сложно использовать, и&nbsp;даже при
+						успешной атаке ущерб будет небольшой.
+				.chart__item.chart-item
+					.chart-item__circle
+						.chart-item__filler
+						span 6 139
+					.chart-item__text.
+						<span>Уровень инфо</span> — это, скорее, замечания к&nbsp;качеству защиты. Они не несут прямой угрозы, но&nbsp;показывают,
+						что в&nbsp;безопасности приложения есть пробелы и&nbsp;зоны для улучшения.
+	section.apps
+		.container
+			.apps__grid
+				.apps__col
+					+title('Уязвимости приложений', 'apps__title')
+					+text('Узнайте больше, загрузив полный отчет.', 'apps__text')
+					+button('Скачать', 'apps__button', '#')
+					.apps__block.apps__block--offset-big
+						.apps__subtitle Сервисы для&nbsp;личного использования
+						.apps__rows
+							.apps__row.apps__row--1
+								.apps__item
+									.apps__image
+										+icon('apps1')
+									.apps__description Мессенджеры и&nbsp;нетворкинг
+								.apps__item
+									.apps__image
+										+icon('apps2')
+									.apps__description Приложения для&nbsp;бизнеса
+								.apps__item
+									.apps__image
+										+icon('apps3')
+									.apps__description Навигация и&nbsp;транспорт
+							.apps__row.apps__row--2
+								.apps__item
+									.apps__image
+										+icon('apps4')
+									.apps__description Книги <br> и&nbsp;справочники
+								.apps__item
+									.apps__image
+										+icon('apps5')
+									.apps__description Семья <br> и&nbsp;дети
+								.apps__item
+									.apps__image
+										+icon('apps6')
+									.apps__description Здоровье <br> и&nbsp;спорт
+								.apps__item
+									.apps__image
+										+icon('apps7')
+									.apps__description Стиль <br> жизни
+				.apps__col
+					.apps__block--offset-small
+						.apps__subtitle Бизнес-приложения
+						.apps__rows
+							.apps__row.apps__row--3
+								.apps__item
+									a.apps__image(href='#', data-hystmodal='#apps1')
+										+icon('apps8')
+									.apps__description Финансы
+								.apps__item
+									.apps__image
+										+icon('apps9')
+									.apps__description Онлайн-ритейл и&nbsp;маркетплейсы
+								.apps__item
+									.apps__image
+										+icon('apps10')
+									.apps__description Доставка еды и&nbsp;продуктов
+								.apps__item
+									.apps__image
+										+icon('apps11')
+									.apps__description СМИ
+							.apps__row.apps__row--4
+								.apps__item
+									.apps__image
+										+icon('apps12')
+									.apps__description Образовательные платформы
+								.apps__item
+									.apps__image
+										+icon('apps13')
+									.apps__description Стриминговые платформы
+								.apps__item
+									.apps__image
+										+icon('apps14')
+									.apps__description Доски <br> объявлений
+							.apps__row.apps__row--5
+								.apps__item
+									.apps__image
+										+icon('apps15')
+									.apps__description Отдых <br> и&nbsp;путешествия
+								.apps__item
+									.apps__image
+										+icon('apps16')
+									.apps__description Букмейкерские компании
+								.apps__item
+									.apps__image
+										+icon('apps17')
+									.apps__description <span style="white-space: nowrap;">Цифровые сервисы</span> и&nbsp;телеком
+							.apps__row.apps__row--6
+								.apps__item
+									.apps__image
+										+icon('apps18')
+									.apps__description Медицинские сервисы
+	section.interview
+		.container.container--big
+			.interview__slider.swiper
+				.swiper-wrapper
+					.interview__slide.swiper-slide
+						.container
+							.interview__top
+								.interview__num 01
+								.interview__type Интервью
+							.interview__grid
+								.interview__col
+									.interview__title Небезопасное хранение чувствительных данных – проблема №1 в&nbsp;мобильных приложениях
+									.interview__person Юрий Шабалин, директор <br> продукта «Стингрей»
+									.interview__image-wrapper
+										+picture('interview/1', 'png', 'interview__image', '')
+									.interview__text.
+										На сегодняшний день продукт «Стингрей» - единственный отечественный сервис, который занимается мониторингом
+										мобильных приложений в России. Как именно он работает и с какими угрозами помогает бороться бизнесу,
+										рассказал <b>директор продукта «Стингрей» Юрий Шабалин.</b>
+								.interview__col
+									.interview__question Какие тренды в контексте угрозы безопасности мобильных приложений можно выделить в 2025 году?
+									.interview__text
+										p.
+											Мы не зря делаем ежегодно отчет об анализе уязвимостей мобильных приложений российских разработчиков. Это
+											необходимо для того, чтобы понять, какие основные тренды в уязвимостях мобильных приложений остаются.
+										p.
+											Как и год-два назад основной проблемой является небезопасное хранение данных. Это могут быть и пароли от
+											приложений, и сессионные идентификаторы, и токены доступа для своих сервисов. В этом году на первом
+											месте – небезопасное хранение ключей доступа от сторонних сервисов. Эти сервисы могут содержать большое
+											количество конфиденциальной информации, утечка которой может быть опасна как для пользователей, так и для компании.
+									.interview__question Давайте приведем пример.
+									.interview__text.
+										Приложение, которое работает с push-уведомлениями. Естественно, компания сама не будет реализовывать программу
+										по доставки «пушей», скорее всего, будет подключен сторонний сервис. А к этом сервису необходим «ключик».
+								.interview__col
+									.interview__text
+										p.
+											К сожалению, мы замечаем, что до сих пор ключи от сторонних сервисов лежат внутри приложений, и получить их может
+											любой желающий. А дальше все зависит от того, правильно ли настроены политики безопасности внутри сервиса.
+											Потенциально такая беспечность может привести к тяжелым последствиям.
+										p.
+											Еще один пример – уязвимости в сервисе Remote Config. Это сторонний сервис, к которому при старте обращается
+											приложение, чтобы удобно демонстрировать рекламу, спойлеры и так далее. Очень часто внутри этого сервиса
+											хранятся ключи шифрования, ключи от интеграций, используя которые можно сильно навредить компании.
+					.interview__slide.swiper-slide
+						.container
+							.interview__top
+								.interview__num 02
+								.interview__type Интервью
+							.interview__grid
+								.interview__col
+									.interview__title Ручной труд ИБ-инженеров не&nbsp;должен стать «бутылочным горлышком», которое тормозит работу всей команды
+									.interview__person Антон Башарин, старший управляющий директор AppSec Solutions
+									.interview__image-wrapper
+										+picture('interview/2', 'png', 'interview__image', '')
+									.interview__text.
+										Как выстроить в компании безопасную разработку программного обеспечения, разгрузив инженеров от рутины? Действительно
+										ли соблюдение принципа Shift + Left помогает от сдвига срока релиза продуктов вправо? На эти и другие вопросы
+										отвечает <b>Антон Башарин, старший управляющий директор AppSec Solutions</b>
+								.interview__col
+									.interview__question На ваш взгляд, принципы безопасной разработки ПО действительно уже стали нормой на российском рынке?
+									.interview__text
+										p.
+											Первый и главный из принципов – Shift + Left, сдвиг влево, означающий, что идентифицировать проблему нужно как можно
+											раньше. Если сделать это накануне выхода релиза, а то и после него, это может очень дорого обойтись и во времени
+											на устранение уязвимостей, и в деньгах, которые придется на это потратить.
+										p.
+											Конечно, для внедрения этого принципа нужна внутренняя зрелость в компании. Хорошо, что в некоторых секторах,
+											особенно в финансовом, драйверами выступают внешние стимулы, например, регуляторные требования ЦБ об обязательном
+											проведении определенных процедур и проверок.
+										p.
+											Но действительно можно отметить тренд 2024-2025 годов, когда крупные промышленные компании начали переходить к
+											принципам DevSecOps без регуляторного принуждения, просто адекватно оценивая собственные риски. Например, что при
+											эффективной атаке злоумышленников через уязвимости в ПО может попросту остановиться технологический процесс, а это
+											огромные экономические издержки.
+								.interview__col
+									.interview__question.
+										Допустим, руководство компании своим решением приходит к необходимости перестроить работу по созданию ПО на принципах
+										DevSecOps. Какие процессы для этого нужно изменить и какие потребуются инструменты?
+									.interview__text
+										p.
+											Начнем с такого процесса, как версионирование. Закончив работу над каким-то фрагментом кода, разработчик
+											делает коммит, появляется промежуточная версия, которую нужно сохранить в репозитории. Эту базовую функцию
+											обеспечивает наш продукт AppSec.Code. Конечно, он умеет не только это. В его функционале автоматическая
+											сборка, развертывание на стенде, промежуточные проверки кода с точки зрения информационной безопасности.
+										p.
+											Второй процесс – анализ зависимостей, то есть не собственного кода, а компонентов с открытым кодом,
+											различных фреймоворков, утилит
+				.interview__nav.swiper-nav
+					.swiper-btn-prev
+						+icon('chevron-left')
+					.swiper-btn-next
+						+icon('chevron-right')
+	section.opinion
+		.container
+			+title('Есть мнение', 'title--big opinion__title')
+			.opinion__slider.swiper
+				.swiper-wrapper
+					.opinion__slide.swiper-slide
+						.opinion__top
+							.opinion__image-wrapper
+								+picture('opinion/1', 'png', 'opinion__image', '')
+							.opinion__person.
+								<b>Михаил Синельников</b> <br>
+								Руководитель центра безопасности контейнерной среды РСХБ
+						.opinion__text.
+							«В ФинТехе мы наблюдаем явный тренд на платформизацию отрасли, что делает защиту мобильных приложений и данных
+							особенно актуальной. Применение методологии Shift-Left, то есть перенос вопросов безопасности на самые ранние
+							стадии разработки ПО, позволяет выявлять и устранять критические уязвимости еще на начальном этапе, что, в свою
+							очередь, значительно экономит ресурсы бизнеса. Комплексный подход к DevSecOps — от использования инструментов SAST/DAST
+							до автоматизации с помощью ASPM — для нас неотъемлемая история».
+					.opinion__slide.swiper-slide
+						.opinion__top
+							.opinion__image-wrapper
+								+picture('opinion/2', 'png', 'opinion__image', '')
+							.opinion__person.
+								<b>Илья Шаров</b> <br>
+								Руководитель центра практик DevSecOps МТС Web Services
+						.opinion__text.
+							«В успехе реализации DevSecOps главную роль играет и будет играть команда, вне зависимости от размера компании, где
+							внедряются практики. При этом ключевым вектором развития разработки безопасного ПО считаю сбор телеметрии и повышение
+							связанности разработки и эксплуатации. Здесь отдельное место в свое время займет направления AI-агентов. В совокупности
+							это позволит обмениваться аномалиями и повысить скорость реагирования на них».
+					.opinion__slide.swiper-slide
+						.opinion__top
+							.opinion__image-wrapper
+								+picture('opinion/3', 'png', 'opinion__image', '')
+							.opinion__person.
+								<b>Роман Морозов</b> <br>
+								Руководитель по информационной безопасности Capital Group
+						.opinion__text.
+							«Мобильное приложение для нас — это ключевой помощник клиента, как в момент покупки, так уже и после заселения в ЖК,
+							поэтому его безопасность — это не отдельная задача, а часть общей стратегии. Да и в целом, экосистема крупного
+							девелопмента сегодня строится на безопасном ПО от BIM-моделирования объектов до мобильных приложений для клиентов.
+							«Конструкция» должна быть надежной и защищенной, и здесь помогают принципы DevSecOps. Вопрос кибербезопасности становятся
+							актуальнее с каждым годом, и сегодня мы уже говорим о необходимости уделить достаточно внимания LLM Security, поскольку
+							искусственный интеллект очень быстро встраивается в бизнес-процессы».
+				.swiper-pagination
+	section.research
+		.container.container--big
+			.research__window
+				+icon('research-pattern')(class='research__bg')
+				.container.research__container
+					.research__content
+						+title('Читайте в исследовании', 'title--big research__title')
+						ul.research__list
+							li Возможные векторы атак: данные о типах киберугроз и&nbsp;распространенности возможных уязвимостях
+							li Уязвимости: описание рисков для&nbsp;безопасности мобильных приложений и&nbsp;их критичности
+							li Рекомендации по устранению: рекомендации экспертов для эффективной защиты от&nbsp;релевантных угроз
+							li Детальные выводы
+						+button('Скачать', 'button--white research__button', '#')
+					.research__image-wrapper
+						+picture('research', 'png', 'research__image', '')
+	section.video
+		.container
+			+title('Защищайте мобильные приложения — <br> защищайте свой бизнес', 'title--big video__title')
+			+text('Главная тенденция в мобильной безопасности сегодня — переход от формального подхода к построению комплексной стратегии ' +
+			'защиты. Она включает риск-ориентированное управление, динамический анализ приложений в реальных условиях эксплуатации, ' +
+			'мониторинг аномалий и учет контекстных факторов: чувствительности данных, требований законодательства и географии пользователей.',
+				'video__text',
+				'Мобильная безопасность — это не просто задача ИБ-отдела. Это стратегический элемент, влияющий на финансовую стабильность, репутацию ' +
+				'и доверие пользователей. <br> <br> <b>Экосистема продуктов AppSec Solutions делает разработку приложений безопасной</b>')
+			.video__iframe-wrapper
+				+icon('video-pattern')(class='video__pattern')
+				.video__iframe
+					.video__poster
+						img(src='./images/video-preview.png', alt='Видео превью')
+						.video__play
+							+icon('play')(width='13', height='16')
+					video(controls)
+						source(src='./images/video1.mp4', type='video/mp4')
+	section.products
+		.container
+			.products__grid
+				.products-card
+					+picture('products/1', 'png', 'products__image', '')
+					.products-card__text Управляйте процессом DevSecOps автоматически с&nbsp;опорой на&nbsp;цифры и&nbsp;факты
+					.products-card__more Подробнее →
+				.products-card
+					+picture('products/2', 'png', 'products__image', '')
+					.products-card__text Предотвращайте атаки на&nbsp;цепочку поставок ПО с&nbsp;помощью практик OSA и&nbsp;SCA
+					.products-card__more Подробнее →
+				.products-card
+					+picture('products/3', 'png', 'products__image', '')
+					.products-card__text Создавайте надежный исходный код и&nbsp;контролируйте его версии
+					.products-card__more Подробнее →
+				.products-card
+					+picture('products/4', 'png', 'products__image', '')
+					.products-card__text Находите уязвимости с&nbsp;помощью искусственого интеллекта
+					.products-card__more Подробнее →
+				.products-card
+					+picture('products/5', 'png', 'products__image', '')
+					.products-card__text Анализируйте защищенность мобильных приложений на&nbsp;базе iOS или&nbsp;Android
+					.products-card__more Подробнее →
+
+block modals
+	#apps1.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня

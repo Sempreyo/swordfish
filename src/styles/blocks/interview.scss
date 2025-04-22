@@ -1,0 +1,95 @@
+.interview {
+	$parent: &;
+
+	padding: 50px 0 0;
+
+	&__slider {
+		position: relative;
+		border-radius: 10px;
+		background-color: $color-card;
+	}
+
+	&__slide {
+		padding: 48px 0;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 26px;
+	}
+
+	&__num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 33px;
+		height: 33px;
+		color: $color-blue;
+		font-size: 11px;
+		border: 1px solid $color-blue;
+		border-radius: 10px;
+	}
+
+	&__type {
+		font-size: 18px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1.3fr 1fr 1fr;
+		gap: 40px;
+		margin-top: 27px;
+	}
+
+	&__title {
+		font-size: 26px;
+		font-weight: 700;
+	}
+
+	&__person {
+		font-size: 20px;
+		font-weight: 500;
+		margin-top: 26px;
+	}
+
+	&__image-wrapper {
+		max-width: 200px;
+		width: 100%;
+		border-radius: 15px;
+		overflow: hidden;
+		margin: 27px 0 20px;
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		aspect-ratio: 1 / 1;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.18;
+
+		& + #{$parent}__question {
+			margin-top: 20px;
+		}
+
+		p + p {
+			margin-top: 10px;
+		}
+	}
+
+	&__question {
+		color: $color-subtitle;
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 14px;
+	}
+
+	&__nav {
+		bottom: 70px;
+		right: 100px;
+	}
+}

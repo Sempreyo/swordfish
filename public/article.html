@@ -27,8 +27,34 @@
     <main class="main">
       <section class="article"></section>
     </main>
+    <div class="button-up button-up--visible">
+      <svg width="18" height="28">
+        <use xlink:href="./images/sprite.svg#button-up"></use>
+      </svg>
+    </div>
     <footer class="footer">
-      <div class="container"></div>
+      <div class="container footer__container">
+        <div class="footer__adv"><span>Реклама</span>
+          <div class="footer__adv-tooltip">
+            <div class="footer__adv-tooltip-block">
+              erid: XXXXXXXXXX <br> Рекламодатель: ООО XXX <br> ИНН/ОГРН: 0000000000/0000000000000 <br> Сайт:
+              <a href="http://www.test.ru/" target="_blank">http://www.test.ru/</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__socials socials"><a class="socials__item" href="#" target="_blank">
+            <picture>
+              <source srcset="./images/social-web.webp 1x, ./images/social-web@2x.webp 2x" type="image/webp">
+              <source srcset="./images/social-web.webp 1x, ./images/social-web@2x.webp 2x" type="image/webp"><img src="./images/social-web.png" srcset="./images/social-web.png 1x, ./images/social-web@2x.png 2x" alt="">
+            </picture><span>appsec.global</span></a><a class="socials__item" href="#" target="_blank">
+            <svg width="14" height="12">
+              <use xlink:href="./images/sprite.svg#tg"></use>
+            </svg><span>@appsecsolutions</span></a><a class="socials__item" href="#" target="_blank">
+            <svg width="13" height="14">
+              <use xlink:href="./images/sprite.svg#rutube"></use>
+            </svg><span>rutube.ru</span></a></div>
+        <div></div>
+      </div>
     </footer>
   </body>
   <script src="js/main.min.js" defer></script>

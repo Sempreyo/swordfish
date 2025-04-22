@@ -1,0 +1,12 @@
+.socials {
+	display: flex;
+	align-items: center;
+	gap: 70px;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+		font-size: 12px;
+	}
+}

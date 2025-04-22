@@ -1,0 +1,140 @@
+.digit-chart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 120px 0;
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		color: $white;
+		font-size: 40px;
+		font-weight: 600;
+		margin-left: -33px;
+		transition: opacity 0.3s ease;
+
+		span {
+			user-select: none;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+		}
+
+		&::before {
+			color: $color-main;
+			font-size: 16px;
+			line-height: 1.18;
+			font-weight: 400;
+			text-align: center;
+		}
+
+		&::after {
+			display: block;
+		}
+
+		&.inactive {
+			opacity: 0.6;
+		}
+
+		&--1 {
+			width: 217px;
+			height: 217px;
+			background-color: #4931ff;
+
+			&::before {
+				content: "вероятность взлома Android-приложений";
+				bottom: calc(100% + 70px);
+			}
+
+			&::after {
+				bottom: 100%;
+				width: 1px;
+				height: 50px;
+				background-color: #4931ff;
+			}
+		}
+
+		&--2 {
+			width: 182px;
+			height: 182px;
+			background-color: #369eff;
+
+			&::before {
+				content: "прирост числа обнаруженных уязвимостей за год с 2023 г.";
+				top: calc(100% + 75px);
+				width: calc(100% + 60px);
+			}
+
+			&::after {
+				top: 100%;
+				width: 1px;
+				height: 58px;
+				background-color: #369eff;
+			}
+		}
+
+		&--3 {
+			z-index: 1;
+			width: 253px;
+			height: 253px;
+			background-color: #00b2ff;
+
+			&::before {
+				content: "мобильных приложений российских разработчиков содержат уязвимости высокого и критического уровня";
+				bottom: calc(100% + 70px);
+				width: calc(100% + 60px);
+			}
+
+			&::after {
+				bottom: 100%;
+				width: 1px;
+				height: 49px;
+				background-color: #00b2ff;
+			}
+		}
+
+		&--4 {
+			width: 272px;
+			height: 272px;
+			background-color: #1f4cca;
+
+			&::before {
+				content: "приложений уязвимы к запуску в\a0условиях динамического анализа";
+				top: calc(100% + 75px);
+				width: calc(100% + 20px);
+			}
+
+			&::after {
+				top: 100%;
+				width: 1px;
+				height: 58px;
+				background-color: #1f4cca;
+			}
+		}
+
+		&--5 {
+			width: 217px;
+			height: 217px;
+			background-color: #6873f1;
+
+			&::before {
+				content: "содержат зашитые в код ключи доступа и учетные данные";
+				bottom: calc(100% + 70px);
+				width: calc(100% + 60px);
+			}
+
+			&::after {
+				bottom: 100%;
+				width: 1px;
+				height: 49px;
+				background-color: #6873f1;
+			}
+		}
+	}
+}

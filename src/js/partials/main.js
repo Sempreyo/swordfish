@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const header = document.querySelector(".header");
+	const modals = new HystModal({
+		linkAttributeName: "data-hystmodal",
+	});
+
+	/*const header = document.querySelector(".header");
 
 	if (header) {
-		/* Разделить строку на символы */
+		/!* Разделить строку на символы *!/
 		const splitText = new SplitType(".split-title", {
 			types: "chars"
 		});
@@ -10,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		document.querySelector(".split-title").classList.add("visible");
 
-		/* Анимация появления символов в первом блоке */
+		/!* Анимация появления символов в первом блоке *!/
 		const heroObserver = new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
@@ -30,5 +34,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		heroObserver.observe(header);
+	}*/
+
+	const digitCharts = document.querySelectorAll(".digit-chart__item");
+
+	if (digitCharts) {
+		digitCharts.forEach(el => {
+			el.addEventListener("mouseover", (e) => {
+				digitCharts.forEach(chart => chart.classList.add("inactive"));
+				e.currentTarget.classList.remove("inactive");
+			});
+
+			el.addEventListener("mouseout", () => {
+				digitCharts.forEach(chart => chart.classList.remove("inactive"));
+			});
+		});
 	}
 });

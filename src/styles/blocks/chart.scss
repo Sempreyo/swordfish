@@ -1,0 +1,19 @@
+.chart {
+	padding: 23px 0 0;
+
+	&__text {
+		margin-top: 25px;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 45px 15px;
+		margin-top: 40px;
+	}
+
+	&__item {
+		width: calc(33.3333% - 15px / 3 * 2);
+	}
+}

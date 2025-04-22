@@ -1,5 +1,6 @@
 /* Libraries */
 @import "../../node_modules/swiper/swiper-bundle.css";
+@import "libs/hystmodal.min.css";
 
 /* Base */
 @import "base/var";
@@ -15,8 +16,22 @@
 @import "blocks/title";
 @import "blocks/text";
 @import "blocks/about-card";
+@import "blocks/digit-chart";
+@import "blocks/chart-item";
+@import "blocks/products-card";
+@import "blocks/socials";
+@import "blocks/hystmodal";
+@import "blocks/modal";
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/article";
 @import "blocks/hero";
 @import "blocks/about";
+@import "blocks/digit";
+@import "blocks/chart";
+@import "blocks/apps";
+@import "blocks/interview";
+@import "blocks/opinion";
+@import "blocks/research";
+@import "blocks/video";
+@import "blocks/products";
