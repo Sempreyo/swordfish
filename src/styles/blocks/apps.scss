@@ -3,10 +3,23 @@
 
 	padding: 130px 0 0;
 
+	@include max(tl) {
+		padding: 80px 0 0;
+	}
+
+	@include max(ti) {
+		padding: 40px 0 0;
+	}
+
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 70px;
+
+		@include max(tl) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 40px;
+		}
 	}
 
 	&__text {
@@ -22,6 +35,10 @@
 	&__block {
 		&--offset-big {
 			margin-top: 115px;
+
+			@include max(tl) {
+				margin-top: 40px;
+			}
 		}
 
 		&--offset-small {
@@ -32,36 +49,97 @@
 	&__subtitle {
 		font-size: 20px;
 		font-weight: 600;
+
+		@include max(t) {
+			text-align: center;
+		}
 	}
 
 	&__rows {
 		margin-top: 30px;
+
+		@include max(tl) {
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 15px;
+		}
+
+		@include max(ti) {
+			margin-top: 20px;
+		}
+
+		@include max(t) {
+			justify-content: center;
+		}
 	}
 
 	&__row {
 		display: flex;
 		gap: 30px;
 
+		@include max(d) {
+			gap: 15px;
+		}
+
+		@include max(ti) {
+			flex-wrap: wrap;
+		}
+
+		@include max(t) {
+			justify-content: center;
+		}
+
 		& + #{$parent}__row {
 			margin-top: 26px;
+
+			@include max(tl) {
+				margin-top: 0;
+			}
 		}
 
 		&--2 {
 			padding-left: 36px;
+
+			@include max(tl) {
+				padding-left: 0;
+			}
 		}
 
 		&--4 {
 			justify-content: flex-end;
+
+			@include max(tl) {
+				justify-content: flex-start;
+			}
+
+			@include max(t) {
+				justify-content: center;
+			}
 		}
 
 		&--5 {
 			justify-content: flex-end;
 			margin-right: 58px;
+
+			@include max(tl) {
+				justify-content: flex-start;
+				margin-right: 0;
+			}
+
+			@include max(t) {
+				justify-content: center;
+			}
 		}
 
 		&--6 {
 			justify-content: flex-end;
 			margin-right: 126px;
+
+			@include max(tl) {
+				justify-content: flex-start;
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -77,8 +155,29 @@
 		justify-content: center;
 		width: 100px;
 		height: 100px;
+		padding: 10px;
 		border-radius: 10px;
 		background-color: $color-blue;
+		transition: background-color 0.3s ease;
+
+		@include max(d) {
+			width: 80px;
+			height: 80px;
+		}
+
+		@include max(tl) {
+			width: 100px;
+			height: 100px;	
+		}
+
+		@include max(t) {
+			width: 90px;
+			height: 90px;
+		}
+
+		&:hover {
+			background-color: $color-button;
+		}
 
 		svg {
 			width: 60px;
@@ -92,5 +191,20 @@
 		line-height: 1.25;
 		text-align: center;
 		margin-top: 11px;
+
+		@include max(d) {
+			max-width: 80px;
+			font-size: 10px;
+		}
+
+		@include max(tl) {
+			max-width: 100px;
+			font-size: 12px;
+		}
+
+		@include max(t) {
+			max-width: 90px;
+			font-size: 10px;
+		}
 	}
 }

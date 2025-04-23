@@ -7,36 +7,23 @@ block vars
 		};
 
 block main
-	section.hero
-		.container.hero__container
-			.hero__content
-				+title('<span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений', 'hero__title', 'h1')
-				.hero__text
-					p.
-						В эпоху тотальной цифровизации мобильные приложения стали неотъемлемой частью бизнес-процессов в&nbsp;критически важных секторах
-						экономики, таких как финансы, здравоохранение, образование и&nbsp;корпоративные сервисы. С&nbsp;увеличением числа пользователей
-						возрастает и&nbsp;количество угроз, связанных с&nbsp;безопасностью мобильного ПО.
-					p.
-						Компания AppSec Solutions провела ежегодное исследование защищенности мобильных приложений российских разработчиков.
-			.hero__image-wrapper
-				+picture('hero', 'png', '', '')
 	section.about
 		.container
 			+title('Об исследовании', 'about__title')
 			+text('Эксперты проверили 1&nbsp;868 мобильных приложений российских разработчиков из&nbsp;18 категорий — от&nbsp;финтеха и&nbsp;онлайн-ритейла ' +
 			'до&nbsp;здравоохранения, образования и&nbsp;корпоративных сервисов.', 'about__text')
 			.about__cards
-				.about-card.about-card--dark
+				.about__card.about-card.about-card--dark
 					.about-card__stat
-						.about-card__num 1 868
+						.about-card__num(data-number="1868") 0
 						.about-card__text приложений Android
 					.about-card__stat
-						.about-card__num 18
+						.about-card__num(data-number="18") 0
 						.about-card__text категорий приложений
 					.about-card__stat
-						.about-card__num 57
+						.about-card__num(data-number="57") 0
 						.about-card__text видов уязвимостей
-				.about-card
+				.about__card.about-card
 					.about-card__title
 						+icon('about1')(width='72', height='72')
 						span Методология
@@ -47,7 +34,7 @@ block main
 						p.
 							Эксперты оценивали входящие в&nbsp;<b>ТОП-100</b> каждой категории приложения на&nbsp;57 видов уязвимостей и&nbsp;исследовали
 							возможные векторы&nbsp;атак.
-				.about-card
+				.about__card.about-card
 					.about-card__title.about-card__title--column
 						+picture('about2', 'png', '', '')
 						span Платформа <br> Стингрей
@@ -60,7 +47,7 @@ block main
 			+text('<b>29 952</b> уязвимости было обнаружено в <b>1 868</b> приложениях. <b>88,6%</b> мобильных приложений на платформе ' +
 			'Android имеют уязвимости высокого и критического уровня. Они могут быть использованы для взлома данных, кражи финансовой ' +
 			'информации и доступа к закрытым корпоративным системам. <br> Этот показатель на <b>33%</b> выше, чем в 2023 году.', 'digit__text')
-			.digit__chart.digit-chart
+			.digit__chart.digit-chart.digit-chart--desktop
 				.digit-chart__item.digit-chart__item--1
 					span 84%
 				.digit-chart__item.digit-chart__item--2
@@ -71,6 +58,14 @@ block main
 					span 90%
 				.digit-chart__item.digit-chart__item--5
 					span 80%
+			.digit__chart.digit__chart--single.digit-chart.digit-chart--mobile
+				.digit-chart__item.digit-chart__item--5
+					span 80%
+			.digit__chart.digit-chart.digit-chart--mobile
+				.digit-chart__item.digit-chart__item--2
+					span 33%
+				.digit-chart__item.digit-chart__item--4
+					span 90%
 	section.chart
 		.container
 			+title('Уязвимости по уровню критичности', 'chart__title')
@@ -81,35 +76,35 @@ block main
 			.chart__items
 				.chart__item.chart-item
 					.chart-item__circle
-						.chart-item__filler
-						span 83
+						.chart-item__filler(data-progress="10%")
+						span(data-number="83") 0
 					.chart-item__text.
 						<span>Критический уровень</span> — самые опасные уязвимости: злоумышленники могут проэксплуатировать их без&nbsp;доступа к&nbsp;аккаунту
 						или участия пользователя и&nbsp;заполучить контроль над системой
 				.chart__item.chart-item
 					.chart-item__circle
-						.chart-item__filler
-						span 8 887
+						.chart-item__filler(data-progress="80%")
+						span(data-number="8887") 0
 					.chart-item__text.
 						<span>Высокий уровень</span> — уязвимости, которые угрожают безопасности данных: могут привести к&nbsp;их утечке, потере или блокировке
 				.chart__item.chart-item
 					.chart-item__circle
-						.chart-item__filler
-						span 10 460
+						.chart-item__filler(data-progress="95%")
+						span(data-number="10460") 0
 					.chart-item__text.
 						<span>Средний уровень</span> — проблемы, которыми злоумышленникам нелегко воспользоваться, но при определенных условиях они
 						также могут поставить под угрозу конфиденциальность, целостность или доступность данных
 				.chart__item.chart-item
 					.chart-item__circle
-						.chart-item__filler
-						span 4 383
+						.chart-item__filler(data-progress="35%")
+						span(data-number="4383") 0
 					.chart-item__text.
 						<span>Низкий уровень</span> — уязвимости с&nbsp;минимальными рисками. Их сложно использовать, и&nbsp;даже при
 						успешной атаке ущерб будет небольшой.
 				.chart__item.chart-item
 					.chart-item__circle
-						.chart-item__filler
-						span 6 139
+						.chart-item__filler(data-progress="53%")
+						span(data-number="6139") 0
 					.chart-item__text.
 						<span>Уровень инфо</span> — это, скорее, замечания к&nbsp;качеству защиты. Они не несут прямой угрозы, но&nbsp;показывают,
 						что в&nbsp;безопасности приложения есть пробелы и&nbsp;зоны для улучшения.
@@ -118,7 +113,7 @@ block main
 			.apps__grid
 				.apps__col
 					+title('Уязвимости приложений', 'apps__title')
-					+text('Узнайте больше, загрузив полный отчет.', 'apps__text')
+					+text('Узнайте больше, загрузив полное исследование.', 'apps__text')
 					+button('Скачать', 'apps__button', '#')
 					.apps__block.apps__block--offset-big
 						.apps__subtitle Сервисы для&nbsp;личного использования
@@ -199,7 +194,7 @@ block main
 								.apps__item
 									.apps__image
 										+icon('apps17')
-									.apps__description <span style="white-space: nowrap;">Цифровые сервисы</span> и&nbsp;телеком
+									.apps__description Цифровые сервисы и&nbsp;телеком
 							.apps__row.apps__row--6
 								.apps__item
 									.apps__image
@@ -217,9 +212,10 @@ block main
 							.interview__grid
 								.interview__col
 									.interview__title Небезопасное хранение чувствительных данных – проблема №1 в&nbsp;мобильных приложениях
-									.interview__person Юрий Шабалин, директор <br> продукта «Стингрей»
-									.interview__image-wrapper
-										+picture('interview/1', 'png', 'interview__image', '')
+									.interview__person-wrapper
+										.interview__person Юрий Шабалин, директор <br> продукта «Стингрей»
+										.interview__image-wrapper
+											+picture('interview/1', 'png', 'interview__image', '')
 									.interview__text.
 										На сегодняшний день продукт «Стингрей» - единственный отечественный сервис, который занимается мониторингом
 										мобильных приложений в России. Как именно он работает и с какими угрозами помогает бороться бизнесу,
@@ -257,9 +253,10 @@ block main
 							.interview__grid
 								.interview__col
 									.interview__title Ручной труд ИБ-инженеров не&nbsp;должен стать «бутылочным горлышком», которое тормозит работу всей команды
-									.interview__person Антон Башарин, старший управляющий директор AppSec Solutions
-									.interview__image-wrapper
-										+picture('interview/2', 'png', 'interview__image', '')
+									.interview__person-wrapper
+										.interview__person Антон Башарин, старший управляющий директор AppSec Solutions
+										.interview__image-wrapper
+											+picture('interview/2', 'png', 'interview__image', '')
 									.interview__text.
 										Как выстроить в компании безопасную разработку программного обеспечения, разгрузив инженеров от рутины? Действительно
 										ли соблюдение принципа Shift + Left помогает от сдвига срока релиза продуктов вправо? На эти и другие вопросы
@@ -334,7 +331,7 @@ block main
 								+picture('opinion/3', 'png', 'opinion__image', '')
 							.opinion__person.
 								<b>Роман Морозов</b> <br>
-								Руководитель по информационной безопасности Capital Group
+								Руководитель по&nbsp;информационной безопасности Capital Group
 						.opinion__text.
 							«Мобильное приложение для нас — это ключевой помощник клиента, как в момент покупки, так уже и после заселения в ЖК,
 							поэтому его безопасность — это не отдельная задача, а часть общей стратегии. Да и в целом, экосистема крупного

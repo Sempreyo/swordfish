@@ -49,6 +49,18 @@ body {
 	-o-font-smoothing: antialiased;
 	-webkit-locale: auto;
 	white-space: normal;
+
+	@include max(d) {
+		font-size: fluid(18, 20, 992, 1280);
+	}
+
+	@include max(tl) {
+		font-size: fluid(16, 18, 768, 992);
+	}
+
+	@include max(ti) {
+		font-size: fluid(14, 16, 0, 768);
+	}
 }
 
 .bottom-overflow {
@@ -207,7 +219,12 @@ ol {
 		cursor: pointer;
 		transition: background-color 0.3s ease;
 
-		&:hover {
+		@include max(ti) {
+			width: 40px;
+			height: 40px;
+		}
+
+		&:not(.swiper-button-disabled):hover {
 			background-color: rgba($color-blue, 0.7);
 		}
 	}

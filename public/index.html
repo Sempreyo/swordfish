@@ -10,22 +10,20 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header__container"><a class="header__logo" href="#" target="_blank">
-          <svg width="133" height="49">
+      <div class="container header__container"><a class="header__logo header__logo--appsec" href="#" target="_blank">
+          <svg>
             <use xlink:href="./images/sprite.svg#logo-appsec"></use>
           </svg></a>
-        <div class="header__right"><a class="header__logo" href="#" target="_blank">
+        <div class="header__right"><a class="header__logo header__logo--stingrey" href="#" target="_blank">
             <picture>
               <source srcset="./images/logo-stingrey.webp 1x, ./images/logo-stingrey@2x.webp 2x" type="image/webp">
               <source srcset="./images/logo-stingrey.webp 1x, ./images/logo-stingrey@2x.webp 2x" type="image/webp"><img src="./images/logo-stingrey.png" srcset="./images/logo-stingrey.png 1x, ./images/logo-stingrey@2x.png 2x" alt="">
-            </picture></a><a class="header__logo" href="#" target="_blank">
-            <svg width="103" height="20">
+            </picture></a><a class="header__logo header__logo--cnews" href="#" target="_blank">
+            <svg>
               <use xlink:href="./images/sprite.svg#logo-cnews"></use>
             </svg></a></div>
       </div>
-    </header>
-    <main class="main">
-      <section class="hero">
+      <div class="hero">
         <div class="container hero__container">
           <div class="hero__content">
             <h1 class="title hero__title"><span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений</h1>
@@ -39,13 +37,20 @@
             </div>
           </div>
           <div class="hero__image-wrapper">
+            <div class="hero__light">
+              <svg>
+                <use xlink:href="./images/sprite.svg#light"></use>
+              </svg>
+            </div>
             <picture>
               <source srcset="./images/hero.webp 1x, ./images/hero@2x.webp 2x" type="image/webp">
               <source srcset="./images/hero.webp 1x, ./images/hero@2x.webp 2x" type="image/webp"><img src="./images/hero.png" srcset="./images/hero.png 1x, ./images/hero@2x.png 2x" alt="">
             </picture>
           </div>
         </div>
-      </section>
+      </div>
+    </header>
+    <main class="main">
       <section class="about">
         <div class="container">
           <h2 class="title about__title">Об исследовании</h2>
@@ -53,21 +58,21 @@
             <p>Эксперты проверили 1&nbsp;868 мобильных приложений российских разработчиков из&nbsp;18 категорий — от&nbsp;финтеха и&nbsp;онлайн-ритейла до&nbsp;здравоохранения, образования и&nbsp;корпоративных сервисов.</p>
           </div>
           <div class="about__cards">
-            <div class="about-card about-card--dark">
+            <div class="about__card about-card about-card--dark">
               <div class="about-card__stat">
-                <div class="about-card__num">1 868</div>
+                <div class="about-card__num" data-number="1868">0</div>
                 <div class="about-card__text">приложений Android</div>
               </div>
               <div class="about-card__stat">
-                <div class="about-card__num">18</div>
+                <div class="about-card__num" data-number="18">0</div>
                 <div class="about-card__text">категорий приложений</div>
               </div>
               <div class="about-card__stat">
-                <div class="about-card__num">57</div>
+                <div class="about-card__num" data-number="57">0</div>
                 <div class="about-card__text">видов уязвимостей</div>
               </div>
             </div>
-            <div class="about-card">
+            <div class="about__card about-card">
               <div class="about-card__title">
                 <svg width="72" height="72">
                   <use xlink:href="./images/sprite.svg#about1"></use>
@@ -84,7 +89,7 @@
                 </p>
               </div>
             </div>
-            <div class="about-card">
+            <div class="about__card about-card">
               <div class="about-card__title about-card__title--column">
                 <picture>
                   <source srcset="./images/about2.webp 1x, ./images/about2@2x.webp 2x" type="image/webp">
@@ -105,12 +110,19 @@
           <div class="text digit__text">
             <p><b>29 952</b> уязвимости было обнаружено в <b>1 868</b> приложениях. <b>88,6%</b> мобильных приложений на платформе Android имеют уязвимости высокого и критического уровня. Они могут быть использованы для взлома данных, кражи финансовой информации и доступа к закрытым корпоративным системам. <br> Этот показатель на <b>33%</b> выше, чем в 2023 году.</p>
           </div>
-          <div class="digit__chart digit-chart">
+          <div class="digit__chart digit-chart digit-chart--desktop">
             <div class="digit-chart__item digit-chart__item--1"><span>84%</span></div>
             <div class="digit-chart__item digit-chart__item--2"><span>33%</span></div>
             <div class="digit-chart__item digit-chart__item--3"><span>88,6%</span></div>
             <div class="digit-chart__item digit-chart__item--4"><span>90%</span></div>
             <div class="digit-chart__item digit-chart__item--5"><span>80%</span></div>
+          </div>
+          <div class="digit__chart digit__chart--single digit-chart digit-chart--mobile">
+            <div class="digit-chart__item digit-chart__item--5"><span>80%</span></div>
+          </div>
+          <div class="digit__chart digit-chart digit-chart--mobile">
+            <div class="digit-chart__item digit-chart__item--2"><span>33%</span></div>
+            <div class="digit-chart__item digit-chart__item--4"><span>90%</span></div>
           </div>
         </div>
       </section>
@@ -124,7 +136,7 @@
           <div class="chart__items">
             <div class="chart__item chart-item">
               <div class="chart-item__circle">
-                <div class="chart-item__filler"></div><span>83</span>
+                <div class="chart-item__filler" data-progress="10%"></div><span data-number="83">0</span>
               </div>
               <div class="chart-item__text">
                 <span>Критический уровень</span> — самые опасные уязвимости: злоумышленники могут проэксплуатировать их без&nbsp;доступа к&nbsp;аккаунту
@@ -133,13 +145,13 @@
             </div>
             <div class="chart__item chart-item">
               <div class="chart-item__circle">
-                <div class="chart-item__filler"></div><span>8 887</span>
+                <div class="chart-item__filler" data-progress="80%"></div><span data-number="8887">0</span>
               </div>
               <div class="chart-item__text"><span>Высокий уровень</span> — уязвимости, которые угрожают безопасности данных: могут привести к&nbsp;их утечке, потере или блокировке</div>
             </div>
             <div class="chart__item chart-item">
               <div class="chart-item__circle">
-                <div class="chart-item__filler"></div><span>10 460</span>
+                <div class="chart-item__filler" data-progress="95%"></div><span data-number="10460">0</span>
               </div>
               <div class="chart-item__text">
                 <span>Средний уровень</span> — проблемы, которыми злоумышленникам нелегко воспользоваться, но при определенных условиях они
@@ -148,7 +160,7 @@
             </div>
             <div class="chart__item chart-item">
               <div class="chart-item__circle">
-                <div class="chart-item__filler"></div><span>4 383</span>
+                <div class="chart-item__filler" data-progress="35%"></div><span data-number="4383">0</span>
               </div>
               <div class="chart-item__text">
                 <span>Низкий уровень</span> — уязвимости с&nbsp;минимальными рисками. Их сложно использовать, и&nbsp;даже при
@@ -157,7 +169,7 @@
             </div>
             <div class="chart__item chart-item">
               <div class="chart-item__circle">
-                <div class="chart-item__filler"></div><span>6 139</span>
+                <div class="chart-item__filler" data-progress="53%"></div><span data-number="6139">0</span>
               </div>
               <div class="chart-item__text">
                 <span>Уровень инфо</span> — это, скорее, замечания к&nbsp;качеству защиты. Они не несут прямой угрозы, но&nbsp;показывают,
@@ -173,7 +185,7 @@
             <div class="apps__col">
               <h2 class="title apps__title">Уязвимости приложений</h2>
               <div class="text apps__text">
-                <p>Узнайте больше, загрузив полный отчет.</p>
+                <p>Узнайте больше, загрузив полное исследование.</p>
               </div><a class="button apps__button" href="#"><span>Скачать</span></a>
               <div class="apps__block apps__block--offset-big">
                 <div class="apps__subtitle">Сервисы для&nbsp;личного использования</div>
@@ -326,7 +338,7 @@
                           <use xlink:href="./images/sprite.svg#apps17"></use>
                         </svg>
                       </div>
-                      <div class="apps__description"><span style="white-space: nowrap;">Цифровые сервисы</span> и&nbsp;телеком</div>
+                      <div class="apps__description">Цифровые сервисы и&nbsp;телеком</div>
                     </div>
                   </div>
                   <div class="apps__row apps__row--6">
@@ -358,12 +370,14 @@
                   <div class="interview__grid">
                     <div class="interview__col">
                       <div class="interview__title">Небезопасное хранение чувствительных данных – проблема №1 в&nbsp;мобильных приложениях</div>
-                      <div class="interview__person">Юрий Шабалин, директор <br> продукта «Стингрей»</div>
-                      <div class="interview__image-wrapper">
-                        <picture>
-                          <source srcset="./images/interview/1.webp 1x, ./images/interview/1@2x.webp 2x" type="image/webp">
-                          <source srcset="./images/interview/1.webp 1x, ./images/interview/1@2x.webp 2x" type="image/webp"><img class="interview__image" src="./images/interview/1.png" srcset="./images/interview/1.png 1x, ./images/interview/1@2x.png 2x" alt="">
-                        </picture>
+                      <div class="interview__person-wrapper">
+                        <div class="interview__person">Юрий Шабалин, директор <br> продукта «Стингрей»</div>
+                        <div class="interview__image-wrapper">
+                          <picture>
+                            <source srcset="./images/interview/1.webp 1x, ./images/interview/1@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/interview/1.webp 1x, ./images/interview/1@2x.webp 2x" type="image/webp"><img class="interview__image" src="./images/interview/1.png" srcset="./images/interview/1.png 1x, ./images/interview/1@2x.png 2x" alt="">
+                          </picture>
+                        </div>
                       </div>
                       <div class="interview__text">
                         На сегодняшний день продукт «Стингрей» - единственный отечественный сервис, который занимается мониторингом
@@ -417,12 +431,14 @@
                   <div class="interview__grid">
                     <div class="interview__col">
                       <div class="interview__title">Ручной труд ИБ-инженеров не&nbsp;должен стать «бутылочным горлышком», которое тормозит работу всей команды</div>
-                      <div class="interview__person">Антон Башарин, старший управляющий директор AppSec Solutions</div>
-                      <div class="interview__image-wrapper">
-                        <picture>
-                          <source srcset="./images/interview/2.webp 1x, ./images/interview/2@2x.webp 2x" type="image/webp">
-                          <source srcset="./images/interview/2.webp 1x, ./images/interview/2@2x.webp 2x" type="image/webp"><img class="interview__image" src="./images/interview/2.png" srcset="./images/interview/2.png 1x, ./images/interview/2@2x.png 2x" alt="">
-                        </picture>
+                      <div class="interview__person-wrapper">
+                        <div class="interview__person">Антон Башарин, старший управляющий директор AppSec Solutions</div>
+                        <div class="interview__image-wrapper">
+                          <picture>
+                            <source srcset="./images/interview/2.webp 1x, ./images/interview/2@2x.webp 2x" type="image/webp">
+                            <source srcset="./images/interview/2.webp 1x, ./images/interview/2@2x.webp 2x" type="image/webp"><img class="interview__image" src="./images/interview/2.png" srcset="./images/interview/2.png 1x, ./images/interview/2@2x.png 2x" alt="">
+                          </picture>
+                        </div>
                       </div>
                       <div class="interview__text">
                         Как выстроить в компании безопасную разработку программного обеспечения, разгрузив инженеров от рутины? Действительно
@@ -544,7 +560,7 @@
                   </div>
                   <div class="opinion__person">
                     <b>Роман Морозов</b> <br>
-                    Руководитель по информационной безопасности Capital Group
+                    Руководитель по&nbsp;информационной безопасности Capital Group
                   </div>
                 </div>
                 <div class="opinion__text">
@@ -686,7 +702,7 @@
             <svg width="13" height="14">
               <use xlink:href="./images/sprite.svg#rutube"></use>
             </svg><span>rutube.ru</span></a></div>
-        <div></div>
+        <div class="footer__empty"></div>
       </div>
     </footer>
   </body>

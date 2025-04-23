@@ -5,11 +5,27 @@
 	z-index: 10;
 	padding: 52px 0;
 
+	@include max(t) {
+		padding: 30px 0 40px;
+	}
+
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 20px;
+		gap: 40px;
+
+		@include max(t) {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			gap: 20px;
+		}
+	}
+
+	&__empty {
+		@include max(ti) {
+			display: none;
+		}
 	}
 
 	&__adv {

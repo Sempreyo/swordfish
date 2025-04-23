@@ -13,13 +13,33 @@
 
 	&__num {
 		font-size: 50px;
+
+		@include max(ti) {
+			font-size: 42px;
+		}
+
+		@include max(t) {
+			font-size: 35x;
+		}
 	}
 
 	&__text {
 		font-size: 18px;
 
+		@include max(ti) {
+			font-size: 16px;
+		}
+
+		@include max(t) {
+			font-size: 14px;
+		}
+
 		p + p {
 			margin-top: 23px;
+
+			@include max(ti) {
+				margin-top: 15px;
+			}
 		}
 	}
 
@@ -29,11 +49,26 @@
 		gap: 31px;
 		margin-bottom: 44px;
 
+		@include max(d) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 21px;
+			margin-bottom: 35px;
+		}
+
+		@include max(ti) {
+			margin-bottom: 20px;
+		}
+
 		&--column {
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 21px;
 			margin-bottom: 35px;
+
+			@include max(ti) {
+				margin-bottom: 20px;
+			}
 		}
 
 		span {

@@ -8,6 +8,16 @@
 		margin-top: 33px;
 		margin-left: calc((-100vw + 1163px) / 2);
 		margin-right: calc((-100vw + 1163px) / 2);
+
+		@include max(d) {
+			overflow: visible;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@include max(ti) {
+			padding-bottom: 35px;
+		}
 	}
 
 	&__slide {
@@ -18,12 +28,26 @@
 		background-color: $color-main;
 		padding: 53px 85px 53px 50px;
 		color: $white;
+
+		@include max(d) {
+			max-width: unset;
+			width: auto;
+		}
+
+		@include max(ti) {
+			padding: 30px 20px;
+		}
 	}
 
 	&__top {
 		display: flex;
 		align-items: center;
 		gap: 20px;
+
+		@include max(t) {
+			flex-direction: column;
+			gap: 10px;
+		}
 	}
 
 	&__image-wrapper {
@@ -42,11 +66,30 @@
 
 	&__person {
 		font-size: 20px;
+
+		@include max(ti) {
+			font-size: 18px;
+		}
+
+		@include max(t) {
+			max-width: 250px;
+			font-size: 16px;
+			text-align: center;
+		}
 	}
 
 	&__text {
 		font-size: 18px;
 		letter-spacing: -0.3px;
 		margin-top: 35px;
+
+		@include max(ti) {
+			font-size: 16px;
+			margin-top: 20px;
+		}
+
+		@include max(t) {
+			font-size: 14px;
+		}
 	}
 }

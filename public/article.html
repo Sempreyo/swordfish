@@ -10,18 +10,44 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header__container"><a class="header__logo" href="#" target="_blank">
-          <svg width="133" height="49">
+      <div class="container header__container"><a class="header__logo header__logo--appsec" href="#" target="_blank">
+          <svg>
             <use xlink:href="./images/sprite.svg#logo-appsec"></use>
           </svg></a>
-        <div class="header__right"><a class="header__logo" href="#" target="_blank">
+        <div class="header__right"><a class="header__logo header__logo--stingrey" href="#" target="_blank">
             <picture>
               <source srcset="./images/logo-stingrey.webp 1x, ./images/logo-stingrey@2x.webp 2x" type="image/webp">
               <source srcset="./images/logo-stingrey.webp 1x, ./images/logo-stingrey@2x.webp 2x" type="image/webp"><img src="./images/logo-stingrey.png" srcset="./images/logo-stingrey.png 1x, ./images/logo-stingrey@2x.png 2x" alt="">
-            </picture></a><a class="header__logo" href="#" target="_blank">
-            <svg width="103" height="20">
+            </picture></a><a class="header__logo header__logo--cnews" href="#" target="_blank">
+            <svg>
               <use xlink:href="./images/sprite.svg#logo-cnews"></use>
             </svg></a></div>
+      </div>
+      <div class="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <h1 class="title hero__title"><span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений</h1>
+            <div class="hero__text">
+              <p>
+                В эпоху тотальной цифровизации мобильные приложения стали неотъемлемой частью бизнес-процессов в&nbsp;критически важных секторах
+                экономики, таких как финансы, здравоохранение, образование и&nbsp;корпоративные сервисы. С&nbsp;увеличением числа пользователей
+                возрастает и&nbsp;количество угроз, связанных с&nbsp;безопасностью мобильного ПО.
+              </p>
+              <p>Компания AppSec Solutions провела ежегодное исследование защищенности мобильных приложений российских разработчиков.</p>
+            </div>
+          </div>
+          <div class="hero__image-wrapper">
+            <div class="hero__light">
+              <svg>
+                <use xlink:href="./images/sprite.svg#light"></use>
+              </svg>
+            </div>
+            <picture>
+              <source srcset="./images/hero.webp 1x, ./images/hero@2x.webp 2x" type="image/webp">
+              <source srcset="./images/hero.webp 1x, ./images/hero@2x.webp 2x" type="image/webp"><img src="./images/hero.png" srcset="./images/hero.png 1x, ./images/hero@2x.png 2x" alt="">
+            </picture>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -53,7 +79,7 @@
             <svg width="13" height="14">
               <use xlink:href="./images/sprite.svg#rutube"></use>
             </svg><span>rutube.ru</span></a></div>
-        <div></div>
+        <div class="footer__empty"></div>
       </div>
     </footer>
   </body>

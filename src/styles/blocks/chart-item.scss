@@ -12,6 +12,16 @@
 		height: 241px;
 		border-radius: 50%;
 
+		@include max(ti) {
+			width: 180px;
+			height: 180px;
+		}
+
+		@include max(t) {
+			width: 241px;
+			height: 241px;
+		}
+
 		&::before,
 		&::after {
 			position: absolute;
@@ -37,15 +47,32 @@
 			color: $color-blue;
 			font-size: 40px;
 			font-weight: 600;
+
+			@include max(d) {
+				font-size: fluid(35, 40, 992, 1280);
+			}
+		
+			@include max(tl) {
+				font-size: fluid(28, 35, 768, 992);
+			}
+		
+			@include max(ti) {
+				font-size: fluid(20, 28, 0, 768);
+			}
+
+			@include max(t) {
+				font-size: 35px;
+			}
 		}
 	}
 
 	&__filler {
 		position: absolute;
 		inset: 0;
-		--p: 10%;
+		--p: 1%;
 		background: conic-gradient(#1f4cca calc(-60% + var(--p)), #1f4cca var(--p), #eaf4fe 0);
 		border-radius: 50%;
+		transition: --p 2s linear;
 
 		&::before {
 			position: absolute;

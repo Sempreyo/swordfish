@@ -25,13 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			const opinionCarouselPagination = el.querySelector(".swiper-pagination");
 
 			const slider = new Swiper(el, {
-				slidesPerView: "auto",
+				slidesPerView: 1,
 				initialSlide: 1,
 				centeredSlides: true,
-				spaceBetween: 50,
+				spaceBetween: 8,
 				pagination: {
 					el: opinionCarouselPagination,
 					clickable: true
+				},
+				breakpoints: {
+					1280: {
+					  slidesPerView: "auto",
+					  spaceBetween: 50
+					},
 				}
 			});
 		});

@@ -1,9 +1,24 @@
 header.header
 	.container.header__container
-		a.header__logo(href='#', target='_blank')
-			+icon('logo-appsec')(width='133', height='49')
+		a.header__logo.header__logo--appsec(href='#', target='_blank')
+			+icon('logo-appsec')
 		.header__right
-			a.header__logo(href='#', target='_blank')
+			a.header__logo.header__logo--stingrey(href='#', target='_blank')
 				+picture('logo-stingrey', 'png', '', '')
-			a.header__logo(href='#', target='_blank')
-				+icon('logo-cnews')(width='103', height='20')
+			a.header__logo.header__logo--cnews(href='#', target='_blank')
+				+icon('logo-cnews')
+	.hero
+		.container.hero__container
+			.hero__content
+				+title('<span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений', 'hero__title', 'h1')
+				.hero__text
+					p.
+						В эпоху тотальной цифровизации мобильные приложения стали неотъемлемой частью бизнес-процессов в&nbsp;критически важных секторах
+						экономики, таких как финансы, здравоохранение, образование и&nbsp;корпоративные сервисы. С&nbsp;увеличением числа пользователей
+						возрастает и&nbsp;количество угроз, связанных с&nbsp;безопасностью мобильного ПО.
+					p.
+						Компания AppSec Solutions провела ежегодное исследование защищенности мобильных приложений российских разработчиков.
+			.hero__image-wrapper
+				.hero__light
+					+icon('light')
+				+picture('hero', 'png', '', '')

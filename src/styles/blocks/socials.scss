@@ -1,7 +1,12 @@
 .socials {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 70px;
+
+	@include max(ti) {
+		gap: 20px;
+	}
 
 	&__item {
 		display: flex;

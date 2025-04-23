@@ -4,11 +4,23 @@
 	padding: 55px 0 0;
 	overflow: hidden;
 
+	@include max(ti) {
+		padding: 40px 0 0;
+	}
+
 	&__text {
 		margin-top: 37px;
 
+		@include max(tl) {
+			margin-top: 25px;
+		}
+
 		p:last-child {
 			padding-left: 100px;
+
+			@include max(tl) {
+				padding-left: 0;
+			}
 		}
 	}
 
@@ -16,6 +28,10 @@
 		position: relative;
 		max-width: 947px;
 		margin-top: 40px;
+
+		@include max(ti) {
+			margin-top: 20px;
+		}
 	}
 
 	&__pattern {

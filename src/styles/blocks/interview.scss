@@ -3,20 +3,40 @@
 
 	padding: 50px 0 0;
 
+	@include max(ti) {
+		padding: 40px 0 0;
+	}
+
 	&__slider {
 		position: relative;
 		border-radius: 10px;
 		background-color: $color-card;
+
+		@include max(tl) {
+			padding-bottom: 100px;
+		}
+
+		@include max(ti) {
+			padding-bottom: 60px;
+		}
 	}
 
 	&__slide {
 		padding: 48px 0;
+
+		@include max(ti) {
+			padding: 20px 0;
+		}
 	}
 
 	&__top {
 		display: flex;
 		align-items: center;
 		gap: 26px;
+
+		@include max(ti) {
+			gap: 15px;
+		}
 	}
 
 	&__num {
@@ -33,6 +53,10 @@
 
 	&__type {
 		font-size: 18px;
+
+		@include max(ti) {
+			font-size: 16px;
+		}
 	}
 
 	&__grid {
@@ -40,17 +64,71 @@
 		grid-template-columns: 1.3fr 1fr 1fr;
 		gap: 40px;
 		margin-top: 27px;
+
+		@include max(tl) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+		}
+
+		@include max(ti) {
+			margin-top: 20px;
+		}
+	}
+
+	&__col {
+		&:first-child {
+			@include max(tl) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
 	}
 
 	&__title {
 		font-size: 26px;
 		font-weight: 700;
+
+		@include max(ti) {
+			font-size: 22px;
+		}
+
+		@include max(t) {
+			font-size: 20px;
+		}
+	}
+
+	&__person-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 27px;
+		margin: 26px 0 20px;
+
+		@include max(tl) {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 27px;
+		}
+
+		@include max(t) {
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+			gap: 15px;
+		}
 	}
 
 	&__person {
 		font-size: 20px;
 		font-weight: 500;
-		margin-top: 26px;
+
+		@include max(ti) {
+			font-size: 18px;
+		}
+
+		@include max(t) {
+			text-align: center;
+		}
 	}
 
 	&__image-wrapper {
@@ -58,7 +136,14 @@
 		width: 100%;
 		border-radius: 15px;
 		overflow: hidden;
-		margin: 27px 0 20px;
+
+		@include max(ti) {
+			max-width: 150px;
+		}
+
+		@include max(t) {
+			max-width: 120px;
+		}
 	}
 
 	&__image {
@@ -72,12 +157,20 @@
 		font-size: 16px;
 		line-height: 1.18;
 
+		@include max(t) {
+			font-size: 14px;
+		}
+
 		& + #{$parent}__question {
 			margin-top: 20px;
 		}
 
 		p + p {
 			margin-top: 10px;
+
+			@include max(tl) {
+				margin-top: 20px;
+			}
 		}
 	}
 
@@ -91,5 +184,12 @@
 	&__nav {
 		bottom: 70px;
 		right: 100px;
+
+		@include max(tl) {
+			bottom: 20px;
+			right: unset;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 }

@@ -17,6 +17,12 @@
 		bottom: 15px;
 	}
 
+	@include max(ti) {
+		left: unset;
+		right: 20px;
+		bottom: 20px;
+	}
+
 	&--visible {
 		opacity: 1;
 		pointer-events: auto;

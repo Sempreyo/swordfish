@@ -7,5 +7,24 @@
 
 	&__chart {
 		margin-top: 34px;
+
+		@include max(dl) {
+			margin-left: 33px;
+		}
+
+		@include max(tl) {
+			margin-left: 20px;
+		}
+
+		&--single {
+			@include max(ti) {
+				padding-right: 120px;
+			}
+
+			@include max(450) {
+				justify-content: flex-start;
+				padding-right: 0;
+			}
+		}
 	}
 }
