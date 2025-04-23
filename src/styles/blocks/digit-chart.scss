@@ -55,7 +55,7 @@
 		font-weight: 600;
 		margin-left: -33px;
 		aspect-ratio: 1 / 1;
-		transition: opacity 0.3s ease;
+		transition: 0.3s ease;
 
 		@include max(tl) {
 			font-size: 34px;
@@ -98,6 +98,23 @@
 
 		&::after {
 			display: block;
+		}
+
+		&.active {
+			transform: scale(1.1);
+			z-index: 2;
+
+			&::before,
+			&::after,
+			span {
+				transform: scale(0.9);
+			}
+		}
+
+		&::before,
+		&::after,
+		span {
+			transition: 0.3s ease;
 		}
 
 		&.inactive {

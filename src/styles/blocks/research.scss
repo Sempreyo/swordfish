@@ -1,6 +1,5 @@
 .research {
 	padding: 50px 0 0;
-	color: $white;
 
 	@include max(ti) {
 		padding: 40px 0 0;
@@ -9,32 +8,12 @@
 	&__window {
 		position: relative;
 		border-radius: 10px;
-		background-color: $color-main;
+		background-color: $color-card;
 		padding: 70px 0 76px;
 		overflow: hidden;
 
 		@include max(ti) {
 			padding: 40px 0;
-		}
-	}
-
-	&__bg {
-		position: absolute;
-		inset: -5%;
-		width: 110%;
-		height: 110%;
-		pointer-events: none;
-
-		@include max(d) {
-			inset: -36%;
-			width: 170%;
-			height: 170%;
-		}
-
-		@include max(ti) {
-			inset: -82%;
-			width: 200%;
-			height: 200%;
 		}
 	}
 

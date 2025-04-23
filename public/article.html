@@ -7,10 +7,14 @@
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet" type="text/css">
     <title>Swordfish статья</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/jquery.validate.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/additional-methods.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/localization/messages_ru.min.js" charset="utf-8"></script>
   </head>
   <body>
     <header class="header">
-      <div class="container header__container"><a class="header__logo header__logo--appsec" href="#" target="_blank">
+      <div class="container header__container hidden"><a class="header__logo header__logo--appsec" href="#" target="_blank">
           <svg>
             <use xlink:href="./images/sprite.svg#logo-appsec"></use>
           </svg></a>
@@ -26,7 +30,7 @@
       <div class="hero">
         <div class="container hero__container">
           <div class="hero__content">
-            <h1 class="title hero__title"><span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений</h1>
+            <h1 class="title hero__title"><div class="hero__title-big">Безопасно в&nbsp;смартфоне</div> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений</h1>
             <div class="hero__text">
               <p>
                 В эпоху тотальной цифровизации мобильные приложения стали неотъемлемой частью бизнес-процессов в&nbsp;критически важных секторах
@@ -37,7 +41,7 @@
             </div>
           </div>
           <div class="hero__image-wrapper">
-            <div class="hero__light">
+            <div class="hero__light hidden">
               <svg>
                 <use xlink:href="./images/sprite.svg#light"></use>
               </svg>
@@ -83,5 +87,5 @@
       </div>
     </footer>
   </body>
-  <script src="js/main.min.js" defer></script>
+  <script src="js/main.min.js"></script>
 </html>

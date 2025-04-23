@@ -14,10 +14,15 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 20px;
+		transition: transform 0.3s ease;
 
 		@include max(t) {
 			flex-wrap: wrap;
 			justify-content: center;
+		}
+
+		&.hidden {
+			transform: translateY(calc(-100% - 53px));
 		}
 	}
 

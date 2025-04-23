@@ -1,6 +1,7 @@
 /* Libraries */
 @import "../../node_modules/swiper/swiper-bundle.css";
 @import "libs/hystmodal.min.css";
+@import "libs/aos.css";
 
 /* Base */
 @import "base/var";
@@ -22,6 +23,7 @@
 @import "blocks/socials";
 @import "blocks/hystmodal";
 @import "blocks/modal";
+@import "blocks/form";
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/article";

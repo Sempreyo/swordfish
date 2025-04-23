@@ -31,6 +31,7 @@
 	&__title-big {
 		font-size: 45px;
 		line-height: 1.2;
+		overflow: hidden;
 
 		@include max(d) {
 			font-size: fluid(38, 45, 992, 1280);
@@ -42,6 +43,11 @@
 
 		@include max(ti) {
 			font-size: fluid(24, 32, 0, 768);
+		}
+
+		.word {
+			transform: translateY(100%);
+			transition: transform 0.3s ease;
 		}
 	}
 
@@ -122,15 +128,20 @@
 		left: -42px;
 		width: 170%;
 		height: 170%;
+		transition: 0.3s linear;
 
 		@include max(dl) {
 			top: -21px;
-    		left: -37px;
+			left: -37px;
 			transform: rotate(12deg);
 		}
 
 		@include max(tl) {
 			display: none;
+		}
+
+		&.hidden {
+			opacity: 0;
 		}
 
 		svg {

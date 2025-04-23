@@ -70,6 +70,7 @@ body {
 main {
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
 }
 
 a {
@@ -261,5 +262,113 @@ ol {
 		&-active {
 			transform: scale(1.5);
 		}
+	}
+}
+
+/* Custom form from adm */
+.ss-form > form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.ss-form-title {
+	display: none;
+}
+
+.ss-item-label {
+	display: none;
+}
+
+.form-item-error {
+	color: $color-error;
+	font-size: 10px;
+	line-height: 1.5;
+}
+
+.ss-form-item input {
+	width: 100%;
+	border: 1px solid $color-main;
+	padding: 31px 20px 28px;
+	background-color: $white;
+	border-radius: 10px;
+	color: $color-main;
+	transition: 0.3s ease;
+
+	&::placeholder {
+		color: $color-placeholder;
+		font-family: $mainFont;
+		font-size: 15px;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $color-blue;
+	}
+}
+
+.ss-item-type-checkbox label {
+	display: flex;
+	gap: 19px;
+	cursor: pointer;
+
+	.ss-input-checkbox {
+		min-width: 30px;
+		max-width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 5px solid rgba(23, 162, 250, 0.6);
+		padding: 0;
+		transition: unset;
+		cursor: pointer;
+
+		&:checked {
+			background-image: url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.99994 2.5034e-05C7.76143 2.5034e-05 10 2.23865 10 5.00003C10 7.76143 7.76143 10 4.99994 10C2.23858 10 -3.00407e-05 7.76143 -3.00407e-05 5.00003C-3.00407e-05 2.23865 2.23858 2.5034e-05 4.99994 2.5034e-05Z" fill="%2316ABFF"/></svg>');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+
+	.ss-input-value {
+		color: $color-placeholder;
+		font-size: 13px;
+		font-weight: 500;
+
+		a {
+			color: $color-placeholder;
+			text-decoration: underline;
+			text-underline-offset: 3px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.ss-form-item-error input {
+	border-color: $color-button;
+}
+
+.ss-form-submit {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	width: 100%;
+	padding: 20px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	background-color: $color-button;
+	color: $white;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	&:hover {
+		background-color: $color-blue;
 	}
 }

@@ -11,6 +11,17 @@
 		padding: 40px 0 0;
 	}
 
+	&__container {
+		position: relative;
+	}
+
+	&__pattern {
+		position: absolute;
+		top: 28%;
+		left: -130px;
+		z-index: -1;
+	}
+
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -26,6 +37,10 @@
 		font-size: 16px;
 		margin-top: 12px;
 		padding-left: 8px;
+
+		@include max(tl) {
+			padding-left: 0;
+		}
 	}
 
 	&__button {

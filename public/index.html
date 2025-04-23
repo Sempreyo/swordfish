@@ -7,10 +7,14 @@
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet" type="text/css">
     <title>Swordfish</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/jquery.validate.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/additional-methods.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/localization/messages_ru.min.js" charset="utf-8"></script>
   </head>
   <body>
     <header class="header">
-      <div class="container header__container"><a class="header__logo header__logo--appsec" href="#" target="_blank">
+      <div class="container header__container hidden"><a class="header__logo header__logo--appsec" href="#" target="_blank">
           <svg>
             <use xlink:href="./images/sprite.svg#logo-appsec"></use>
           </svg></a>
@@ -26,7 +30,7 @@
       <div class="hero">
         <div class="container hero__container">
           <div class="hero__content">
-            <h1 class="title hero__title"><span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений</h1>
+            <h1 class="title hero__title"><div class="hero__title-big">Безопасно в&nbsp;смартфоне</div> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений</h1>
             <div class="hero__text">
               <p>
                 В эпоху тотальной цифровизации мобильные приложения стали неотъемлемой частью бизнес-процессов в&nbsp;критически важных секторах
@@ -37,7 +41,7 @@
             </div>
           </div>
           <div class="hero__image-wrapper">
-            <div class="hero__light">
+            <div class="hero__light hidden">
               <svg>
                 <use xlink:href="./images/sprite.svg#light"></use>
               </svg>
@@ -52,8 +56,11 @@
     </header>
     <main class="main">
       <section class="about">
-        <div class="container">
-          <h2 class="title about__title">Об исследовании</h2>
+        <div class="container about__container">
+          <svg class="about__pattern" width="440" height="1088">
+            <use xlink:href="./images/sprite.svg#pattern1"></use>
+          </svg>
+          <h2 class="title about__title" data-aos="fade-right">Об исследовании</h2>
           <div class="text about__text">
             <p>Эксперты проверили 1&nbsp;868 мобильных приложений российских разработчиков из&nbsp;18 категорий — от&nbsp;финтеха и&nbsp;онлайн-ритейла до&nbsp;здравоохранения, образования и&nbsp;корпоративных сервисов.</p>
           </div>
@@ -106,7 +113,7 @@
       </section>
       <section class="digit">
         <div class="container">
-          <h2 class="title digit__title">Ключевые цифры 2024 года</h2>
+          <h2 class="title digit__title" data-aos="fade-right">Ключевые цифры 2024 года</h2>
           <div class="text digit__text">
             <p><b>29 952</b> уязвимости было обнаружено в <b>1 868</b> приложениях. <b>88,6%</b> мобильных приложений на платформе Android имеют уязвимости высокого и критического уровня. Они могут быть использованы для взлома данных, кражи финансовой информации и доступа к закрытым корпоративным системам. <br> Этот показатель на <b>33%</b> выше, чем в 2023 году.</p>
           </div>
@@ -127,8 +134,11 @@
         </div>
       </section>
       <section class="chart">
-        <div class="container">
-          <h2 class="title chart__title">Уязвимости по уровню критичности</h2>
+        <div class="container chart__container">
+          <svg class="chart__pattern" width="1440" height="1725">
+            <use xlink:href="./images/sprite.svg#pattern2"></use>
+          </svg>
+          <h2 class="title chart__title" data-aos="fade-right">Уязвимости по уровню критичности</h2>
           <div class="text chart__text text--columns">
             <p>Большинство просканированных приложений содержит уязвимости, которые снижают уровень безопасности ПО&nbsp;и&nbsp;могут стать входными точками для хакерских атак.</p>
             <p>Выделяют уровни критичности уязвимости — степень серьезности проблем безопасности с учетом потенциальных рисков.</p>
@@ -180,73 +190,62 @@
         </div>
       </section>
       <section class="apps">
-        <div class="container">
+        <div class="container apps__container">
+          <svg class="apps__pattern" width="765" height="1861">
+            <use xlink:href="./images/sprite.svg#pattern3"></use>
+          </svg>
           <div class="apps__grid">
             <div class="apps__col">
-              <h2 class="title apps__title">Уязвимости приложений</h2>
+              <h2 class="title apps__title" data-aos="fade-right">Уязвимости приложений</h2>
               <div class="text apps__text">
                 <p>Узнайте больше, загрузив полное исследование.</p>
-              </div><a class="button apps__button" href="#"><span>Скачать</span></a>
+              </div><a class="button apps__button" href="#" data-hystmodal="#formResearch"><span>Скачать</span></a>
               <div class="apps__block apps__block--offset-big">
                 <div class="apps__subtitle">Сервисы для&nbsp;личного использования</div>
                 <div class="apps__rows">
                   <div class="apps__row apps__row--1">
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps1">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps1"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Мессенджеры и&nbsp;нетворкинг</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps2">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps2"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Приложения для&nbsp;бизнеса</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps3">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps3"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Навигация и&nbsp;транспорт</div>
                     </div>
                   </div>
                   <div class="apps__row apps__row--2">
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps4">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps4"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Книги <br> и&nbsp;справочники</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps5">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps5"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Семья <br> и&nbsp;дети</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps6">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps6"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Здоровье <br> и&nbsp;спорт</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps7">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps7"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Стиль <br> жизни</div>
                     </div>
                   </div>
@@ -258,96 +257,76 @@
                 <div class="apps__subtitle">Бизнес-приложения</div>
                 <div class="apps__rows">
                   <div class="apps__row apps__row--3">
-                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps1">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps8">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps8"></use>
                         </svg></a>
                       <div class="apps__description">Финансы</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps9">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps9"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Онлайн-ритейл и&nbsp;маркетплейсы</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps10">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps10"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Доставка еды и&nbsp;продуктов</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps11">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps11"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">СМИ</div>
                     </div>
                   </div>
                   <div class="apps__row apps__row--4">
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps12">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps12"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Образовательные платформы</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps13">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps13"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Стриминговые платформы</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps14">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps14"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Доски <br> объявлений</div>
                     </div>
                   </div>
                   <div class="apps__row apps__row--5">
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps15">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps15"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Отдых <br> и&nbsp;путешествия</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps16">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps16"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Букмейкерские компании</div>
                     </div>
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps17">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps17"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Цифровые сервисы и&nbsp;телеком</div>
                     </div>
                   </div>
                   <div class="apps__row apps__row--6">
-                    <div class="apps__item">
-                      <div class="apps__image">
+                    <div class="apps__item"><a class="apps__image" href="#" data-hystmodal="#apps18">
                         <svg>
                           <use xlink:href="./images/sprite.svg#apps18"></use>
-                        </svg>
-                      </div>
+                        </svg></a>
                       <div class="apps__description">Медицинские сервисы</div>
                     </div>
                   </div>
@@ -445,14 +424,12 @@
                         ли соблюдение принципа Shift + Left помогает от сдвига срока релиза продуктов вправо? На эти и другие вопросы
                         отвечает <b>Антон Башарин, старший управляющий директор AppSec Solutions</b>
                       </div>
-                    </div>
-                    <div class="interview__col">
-                      <div class="interview__question">На ваш взгляд, принципы безопасной разработки ПО действительно уже стали нормой на российском рынке?</div>
+                      <div class="interview__question"><b>CNews: На ваш взгляд, принципы безопасной разработки ПО действительно уже стали нормой на российском рынке?</b></div>
                       <div class="interview__text">
                         <p>
-                          Первый и главный из принципов – Shift + Left, сдвиг влево, означающий, что идентифицировать проблему нужно как можно
-                          раньше. Если сделать это накануне выхода релиза, а то и после него, это может очень дорого обойтись и во времени
-                          на устранение уязвимостей, и в деньгах, которые придется на это потратить.
+                          <b>Антон Башарин:</b> Первый и главный из принципов – Shift + Left, сдвиг влево, означающий, что идентифицировать
+                          проблему нужно как можно раньше. Если сделать это накануне выхода релиза, а то и после него, это может очень дорого
+                          обойтись и во времени на устранение уязвимостей, и в деньгах, которые придется на это потратить.
                         </p>
                         <p>
                           Конечно, для внедрения этого принципа нужна внутренняя зрелость в компании. Хорошо, что в некоторых секторах,
@@ -461,27 +438,110 @@
                         </p>
                         <p>
                           Но действительно можно отметить тренд 2024-2025 годов, когда крупные промышленные компании начали переходить к
-                          принципам DevSecOps без регуляторного принуждения, просто адекватно оценивая собственные риски. Например, что при
-                          эффективной атаке злоумышленников через уязвимости в ПО может попросту остановиться технологический процесс, а это
-                          огромные экономические издержки.
+                          принципам DevSecOps без регуляторного принуждения, просто адекватно оценивая собственные риски. Например, что
+                          при эффективной атаке злоумышленников через уязвимости в ПО может попросту остановиться технологический процесс,
+                          а это огромные экономические издержки.
+                        </p>
+                      </div>
+                      <div class="interview__question">
+                        <b>CNews: Допустим, руководство компании своим решением приходит к необходимости перестроить работу по созданию ПО на
+                        	принципах DevSecOps. Какие процессы для этого нужно изменить и какие потребуются инструменты?</b>
+                      </div>
+                      <div class="interview__text">
+                        <p>
+                          <b>Антон Башарин:</b> Начнем с такого процесса, как версионирование. Закончив работу над каким-то фрагментом кода,
+                          разработчик делает коммит, появляется промежуточная версия, которую нужно сохранить в репозитории. Эту базовую функцию
+                          обеспечивает наш продукт AppSec.Code. Конечно, он умеет не только это. В его функционале автоматическая сборка,
+                          развертывание на стенде, промежуточные проверки кода с точки зрения информационной безопасности.
+                        </p>
+                        <p>
+                          Второй процесс – анализ зависимостей, то есть не собственного кода, а компонентов с открытым кодом, различных
+                          фреймоворков, утилит и так далее. Разумеется, разработчики не пишут весь код с нуля. Более того, в большом проекте
+                          доля компонентов-зависимостей может составлять 90-95%.
+                        </p>
+                        <p>
+                          Проводить их проверку на безопасность силами ИБ-команды просто нереально. Да и не нужно, потому что для этого есть
+                          AppSec.Track. У него есть база знаний, обновляемая 24/7, к которой могут обращаться разработчики клиента и
+                          оперативно получать информацию, содержит ли зависимость уязвимости и если да, то какого они типа и уровня опасности.
+                          В итоге с помощью AppSec.Track собирается SBOM-файл (Software Bill of Material), в котором описываются все уязвимости.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="interview__col">
+                      <div class="interview__question"><b>CNews: Отдельно стоит рассмотреть процессы, связанные с мобильными приложениями.</b></div>
+                      <div class="interview__text">
+                        <p>
+                          <b>Антон Башарин:</b> Да, их безопасность помогает обеспечить наш продукт «Стингрей». В каждом приложении разработчики
+                          выстраивают набор политик, что приложению позволено делать, а что нет. Так, оно не должно требовать избыточных прав,
+                          обращаться к несвойственным для его работы папкам в файловой системе, сохранять секреты только в закрытых областях,
+                          то есть, например, не сохранять пин-ког и пароль в областях памяти, к которым могут иметь доступ другие приложения
+                          и т.д. Необходимо выявлять нарушение таких политик как в поле зависимостей, так и в поле собственного кода.
+                        </p>
+                        <p>
+                          После сборки приложение начинает напоминать «черный ящик», в том числе, и с точки зрения вопросов информационной
+                          безопасности. А «Стингрей» приоткрывает этот ящик, эмулирует работу приложения в Android или непосредственно
+                          запуская его в iOS. Тесты как раз позволяют выявить проблемы в ИБ, которые должны решать разработчики.
+                        </p>
+                      </div>
+                      <div class="interview__question"><b>CNews: А процесс безопасной разработки?</b></div>
+                      <div class="interview__text">
+                        <p>
+                          <b>Антон Башарин:</b> Да, он тоже нуждается в комплексном управлении. Это позволяет делать AppSec.Hub. В крупной
+                          организации может быть 100 репозиториев исходного кода, и это норма, а далеко не максимум. В то же время на рынке
+                          (и в портфеле AppSec. Solutions) есть десять типов сканеров, и в каждом типе их может быть не по одному.
+                        </p>
+                        <p>
+                          Каждый сканер хорош именно в своей области. И вот это разнообразие инструментов накладывается на огромные объемы
+                          кода, выявляются в буквальном смысле тысячи и десятки тысяч уязвимостей. Работать с такими данными в ручном
+                          режиме невозможно. Да и не нужно – ведь для этого есть AppSec.Hub.
+                        </p>
+                        <p>
+                          Он позволяет подключать разные типы сканеров, консолидировать информацию о всех уязвимостях и выполнять их
+                          автоматический разбор. На практике до 90% срабатываний сканеров могут быть ложноположительными, и в половине
+                          случаев это вполне позволяет определить автоматика.
+                        </p>
+                      </div>
+                      <div class="interview__question"><b>CNews: Своего рода «второй пилот» инженера?</b></div>
+                      <div class="interview__text">
+                        <p>
+                          <b>Антон Башарин:</b> Да, на базе наших собственных разработок в сфере искусственного интеллекта. Без его помощи
+                          ручной труд ИБ-инженеров становится «бутылочным горлышком», которое тормозит работу всей команды. Ведь, как
+                          правило, один ИБ-инженер приходится на сто, а то и на тысячу разработчиков.
                         </p>
                       </div>
                     </div>
                     <div class="interview__col">
                       <div class="interview__question">
-                        Допустим, руководство компании своим решением приходит к необходимости перестроить работу по созданию ПО на принципах
-                        DevSecOps. Какие процессы для этого нужно изменить и какие потребуются инструменты?
+                        <b>CNews: Продукт полезен на уровне разработчиков, но выстраивание процессов, в том числе бизнес-процессов – прерогатива
+                        менеджеров, руководства. Чем им может пригодиться AppSec. Hub?</b>
                       </div>
                       <div class="interview__text">
                         <p>
-                          Начнем с такого процесса, как версионирование. Закончив работу над каким-то фрагментом кода, разработчик
-                          делает коммит, появляется промежуточная версия, которую нужно сохранить в репозитории. Эту базовую функцию
-                          обеспечивает наш продукт AppSec.Code. Конечно, он умеет не только это. В его функционале автоматическая
-                          сборка, развертывание на стенде, промежуточные проверки кода с точки зрения информационной безопасности.
+                          <b>Антон Башарин:</b> Мы очень много работали над представлением данных, над их визуализацией, и в итоге получился
+                          очень информативный и адаптивный дашборд.
                         </p>
                         <p>
-                          Второй процесс – анализ зависимостей, то есть не собственного кода, а компонентов с открытым кодом,
-                          различных фреймоворков, утилит
+                          Он позволяет отслеживать важнейшие метрики в области информационной безопасности. Делает срез текущего состояния,
+                          комплексный анализ технического долга, на котором видно количество, структура и уровень критичности уязвимостей
+                          в релизах, которые уже вышли в эксплуатацию. И даже позволяет его соотнести с требованиям комплаенса. Например,
+                          в сфере финансов действуют установленные Банком России так называемые уровни доверия, и только при ОУД-4 и выше
+                          ваш продукт можно выводить на рынок.
+                        </p>
+                        <p>
+                          Кроме текущего состояния, можно анализировать тренд, сокращается ли техдолг или растет. И уже понимая этот тренд,
+                          можно выяснить, почему так происходит, что нужно изменить, донастроить в работе команды, в процессах.
+                        </p>
+                      </div>
+                      <div class="interview__question">
+                        <b>CNews: Предположим, руководитель компании дочитал наше интервью до этого момента и твердо принял решение
+                        сделать Shift + left. Сколько времени требуется для выстраивания процессов?</b>
+                      </div>
+                      <div class="interview__text">
+                        <p>
+                          <b>Антон Башарин:</b> Если мы выходим в «чистое поле», все просто. С нуля благодаря нашему опыту и нашим
+                          решениям выстроить процессы безопасной разработки вполне реально за несколько недель. Когда в компании уже
+                          сформированы процессы обеспечения информационной безопасности, часто неэффективные, перестроить ее работу
+                          сложнее, но, безусловно, тоже реально.
                         </p>
                       </div>
                     </div>
@@ -506,7 +566,7 @@
       </section>
       <section class="opinion">
         <div class="container">
-          <h2 class="title title--big opinion__title">Есть мнение</h2>
+          <h2 class="title title--big opinion__title" data-aos="fade-right">Есть мнение</h2>
           <div class="opinion__slider swiper">
             <div class="swiper-wrapper">
               <div class="opinion__slide swiper-slide">
@@ -580,18 +640,15 @@
       <section class="research">
         <div class="container container--big">
           <div class="research__window">
-            <svg class="research__bg">
-              <use xlink:href="./images/sprite.svg#research-pattern"></use>
-            </svg>
             <div class="container research__container">
               <div class="research__content">
-                <h2 class="title title--big research__title">Читайте в исследовании</h2>
+                <h2 class="title title--big research__title" data-aos="fade-right">Читайте в исследовании</h2>
                 <ul class="research__list">
                   <li>Возможные векторы атак: данные о типах киберугроз и&nbsp;распространенности возможных уязвимостях</li>
                   <li>Уязвимости: описание рисков для&nbsp;безопасности мобильных приложений и&nbsp;их критичности</li>
                   <li>Рекомендации по устранению: рекомендации экспертов для эффективной защиты от&nbsp;релевантных угроз</li>
                   <li>Детальные выводы</li>
-                </ul><a class="button button--white research__button" href="#"><span>Скачать</span></a>
+                </ul><a class="button research__button" href="#" data-hystmodal="#formResearch"><span>Скачать</span></a>
               </div>
               <div class="research__image-wrapper">
                 <picture>
@@ -604,8 +661,14 @@
         </div>
       </section>
       <section class="video">
-        <div class="container">
-          <h2 class="title title--big video__title">Защищайте мобильные приложения — <br> защищайте свой бизнес</h2>
+        <div class="container video__container">
+          <svg class="video__pattern-1" width="441" height="665">
+            <use xlink:href="./images/sprite.svg#pattern5"></use>
+          </svg>
+          <svg class="video__pattern-2" width="292" height="947">
+            <use xlink:href="./images/sprite.svg#pattern4"></use>
+          </svg>
+          <h2 class="title title--big video__title" data-aos="fade-right">Защищайте мобильные приложения — <br> защищайте свой бизнес</h2>
           <div class="text video__text text--columns">
             <p>Главная тенденция в мобильной безопасности сегодня — переход от формального подхода к построению комплексной стратегии защиты. Она включает риск-ориентированное управление, динамический анализ приложений в реальных условиях эксплуатации, мониторинг аномалий и учет контекстных факторов: чувствительности данных, требований законодательства и географии пользователей.</p>
             <p>Мобильная безопасность — это не просто задача ИБ-отдела. Это стратегический элемент, влияющий на финансовую стабильность, репутацию и доверие пользователей. <br> <br> <b>Экосистема продуктов AppSec Solutions делает разработку приложений безопасной</b></p>
@@ -751,5 +814,787 @@
       </div>
     </div>
   </div>
-  <script src="js/main.min.js" defer></script>
+  <div class="hystmodal" id="apps2" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps3" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps4" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps5" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps6" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps7" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps8" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps9" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps10" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps11" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps12" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps13" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps14" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps15" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps16" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps17" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal" id="apps18" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="modal">
+          <div class="modal__title">Финансы</div>
+          <div class="modal__result">
+            <div class="modal__result-text">Просканировано <br> <span>1 583</span> приложения</div>
+            <div class="modal__image">
+              <svg>
+                <use xlink:href="./images/sprite.svg#apps8"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__subtitle">Найдено уязвимостей</div>
+          <div class="modal__list">
+            <div class="modal__list-item">
+              <p style="color: #540339">53</p>
+              <p><span style='color: #540339'>критического</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #fe012e">516</p>
+              <p><span style='color: #fe012e'>высокого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #f06020">595</p>
+              <p><span style='color: #f06020'>среднего</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #344bfd">196</p>
+              <p><span style='color: #344bfd'>низкого</span> уровня</p>
+            </div>
+            <div class="modal__list-item">
+              <p style="color: #16abff">223</p>
+              <p><span style='color: #16abff'>info</span> уровня</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hystmodal hystmodal--form" id="formResearch" aria-hidden="true">
+    <div class="hystmodal__wrap">
+      <div class="hystmodal__window" role="dialog" aria-modal="true">
+        <button class="hystmodal__close" data-hystclose>
+          <svg width="30" height="30">
+            <use xlink:href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="form">
+          <div class="form__title">Скачать <br> исследование</div>
+          <div class="form__wrapper">
+            <script type="text/javascript" src="https://www.cnews.ru/inc/form/viewform.php?id=2566&amp;embedded=js" charset="UTF-8"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.min.js"></script>
 </html>

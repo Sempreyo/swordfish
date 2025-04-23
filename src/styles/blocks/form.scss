@@ -1,0 +1,46 @@
+.form {
+	width: 100%;
+	border-radius: 10px;
+	border: 2px solid $color-main;
+	padding: 30px 77px;
+
+	@include max(ti) {
+		padding: 20px 15px;
+	}
+
+	@include max(t) {
+		padding: 0;
+		border: 0;
+	}
+
+	&__title {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 20px;
+		font-size: 32px;
+		font-weight: 700;
+
+		@include max(ti) {
+			font-size: 26px;
+		}
+
+		@include max(t) {
+			font-size: 22px;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 46px;
+			height: 8px;
+			background-color: $color-bullet;
+			margin-bottom: 13px;
+			margin-right: 10px;
+		}
+	}
+
+	&__wrapper {
+		margin-top: 30px;
+	}
+}

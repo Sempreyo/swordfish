@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		linkAttributeName: "data-hystmodal",
 	});
 
+	AOS.init();
+
 	/* Добавляем кастомное свойство для анимированного прогрессбара в круговой диаграмме */
 	window.CSS.registerProperty({
 		name: "--p",
@@ -11,38 +13,44 @@ document.addEventListener("DOMContentLoaded", () => {
 		initialValue: "10%",
 	});
 
-	/*const header = document.querySelector(".header");
+	const header = document.querySelector(".header");
 
 	if (header) {
-		/!* Разделить строку на символы *!/
-		const splitText = new SplitType(".split-title", {
-			types: "chars"
+		/* Разделить строку на символы */
+		const splitText = new SplitType(".hero__title-big", {
+			types: "words"
 		});
-		const titleShadow = document.querySelector(".header__title-shadow img");
+		const headerContainer = header.querySelector(".header__container");
+		const heroLight = document.querySelector(".hero__light");
+		const words = document.querySelectorAll(".hero__title-big .word");
 
-		document.querySelector(".split-title").classList.add("visible");
-
-		/!* Анимация появления символов в первом блоке *!/
+		/* Анимация появления символов в первом блоке */
 		const heroObserver = new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					const chars = document.querySelectorAll(".split-title .char");
-
-					chars.forEach((el, index) => {
-						setTimeout(() => {
-							el.style.transform = 'translateX(0)';
-						}, 50 * index);
-					});
+					headerContainer.classList.remove("hidden");
 
 					setTimeout(() => {
-						titleShadow.classList.add("visible");
-					}, 50 * chars.length + 300);
+						heroLight.classList.remove("hidden");
+					}, 300);
+
+					words.forEach((el, index) => {
+						setTimeout(() => {
+							el.style.transform = "translateY(0)";
+						}, 300 + 100 * index);
+					});
+				} else {
+					heroLight.classList.add("hidden");
+
+					words.forEach(el => {
+						el.style.transform = "translateY(calc(-100% - 53px))";
+					});
 				}
 			});
 		});
 
 		heroObserver.observe(header);
-	}*/
+	}
 
 	/* Анимация наведения на круговые диаграммы */
 	const digitCharts = document.querySelectorAll(".digit-chart__item");
@@ -52,10 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			el.addEventListener("mouseover", (e) => {
 				digitCharts.forEach(chart => chart.classList.add("inactive"));
 				e.currentTarget.classList.remove("inactive");
+				e.currentTarget.classList.add("active");
 			});
 
 			el.addEventListener("mouseout", () => {
-				digitCharts.forEach(chart => chart.classList.remove("inactive"));
+				digitCharts.forEach(chart => chart.classList.remove("inactive", "active"));
 			});
 		});
 	}

@@ -1,6 +1,17 @@
 .chart {
 	padding: 23px 0 0;
 
+	&__container {
+		position: relative;
+	}
+
+	&__pattern {
+		position: absolute;
+		top: 56%;
+		left: -110px;
+		z-index: -1;
+	}
+
 	&__text {
 		margin-top: 25px;
 	}

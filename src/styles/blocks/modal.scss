@@ -6,6 +6,14 @@
 		font-weight: 600;
 		text-align: center;
 		padding: 51px 10px 40px;
+
+		@include max(ti) {
+			font-size: 32px;
+		}
+
+		@include max(t) {
+			font-size: 24px;
+		}
 	}
 
 	&__result {
@@ -15,10 +23,22 @@
 		gap: 20px;
 		background-color: $color-card;
 		padding: 46px 50px;
+
+		@include max(ti) {
+			padding: 25px 20px;
+		}
 	}
 
 	&__result-text {
 		font-size: 28px;
+
+		@include max(ti) {
+			font-size: 24px;
+		}
+
+		@include max(t) {
+			font-size: 20px;
+		}
 
 		span {
 			color: $color-blue;
@@ -34,6 +54,12 @@
 		border-radius: 10px;
 		background-color: $color-blue;
 
+		@include max(t) {
+			width: 60px;
+			height: 60px;
+			padding: 10px;
+		}
+
 		svg {
 			width: 60px;
 			height: 60px;
@@ -44,6 +70,15 @@
 		font-size: 30px;
 		text-align: center;
 		padding: 30px 10px 0;
+
+		@include max(ti) {
+			font-size: 24px;
+			padding: 25px 20px 0;
+		}
+
+		@include max(t) {
+			font-size: 18px;
+		}
 	}
 
 	&__list {
@@ -51,11 +86,24 @@
 		flex-direction: column;
 		gap: 10px;
 		padding: 35px 50px 50px;
+
+		@include max(ti) {
+			padding: 25px 20px;
+		}
 	}
 
 	&__list-item {
 		display: flex;
 		align-items: center;
+
+		@include max(ti) {
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		@include max(t) {
+			width: 200px;
+		}
 
 		p {
 			&:first-child {
@@ -63,10 +111,24 @@
 				font-size: 100px;
 				line-height: 1.21;
 				font-weight: 600;
+
+				@include max(ti) {
+					min-width: 150px;
+					font-size: 60px;
+				}
+
+				@include max(t) {
+					min-width: 100px;
+					font-size: 40px;
+				}
 			}
 
 			&:last-child {
 				font-size: 24px;
+
+				@include max(t) {
+					font-size: 18px;
+				}
 			}
 		}
 	}

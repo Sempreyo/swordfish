@@ -1,5 +1,5 @@
 header.header
-	.container.header__container
+	.container.header__container.hidden
 		a.header__logo.header__logo--appsec(href='#', target='_blank')
 			+icon('logo-appsec')
 		.header__right
@@ -10,7 +10,7 @@ header.header
 	.hero
 		.container.hero__container
 			.hero__content
-				+title('<span class="hero__title-big">Безопасно в смартфоне</span> <br> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений', 'hero__title', 'h1')
+				+title('<div class="hero__title-big">Безопасно в&nbsp;смартфоне</div> Исследование <span class="hero__title-accent">уязвимостей</span> <br> мобильных приложений', 'hero__title', 'h1')
 				.hero__text
 					p.
 						В эпоху тотальной цифровизации мобильные приложения стали неотъемлемой частью бизнес-процессов в&nbsp;критически важных секторах
@@ -19,6 +19,6 @@ header.header
 					p.
 						Компания AppSec Solutions провела ежегодное исследование защищенности мобильных приложений российских разработчиков.
 			.hero__image-wrapper
-				.hero__light
+				.hero__light.hidden
 					+icon('light')
 				+picture('hero', 'png', '', '')

@@ -13,6 +13,11 @@ html(lang='ru')
 		link(href='css/main.min.css', rel='stylesheet', type='text/css')
 		title= `${page.title}`
 
+		script(type='text/javascript' src='./js/jquery.min.js')
+		script(type='text/javascript' src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/jquery.validate.min.js' charset='utf-8')
+		script(type='text/javascript' src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/additional-methods.min.js' charset='utf-8')
+		script(type='text/javascript' src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.1/localization/messages_ru.min.js' charset='utf-8')
+
 	body
 		block header
 			include ../blocks/header
@@ -28,6 +33,6 @@ html(lang='ru')
 
 	block modals
 
-	script(src="js/main.min.js" defer)
+	script(src="js/main.min.js")
 
 	block scripts

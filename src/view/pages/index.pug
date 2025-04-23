@@ -8,8 +8,9 @@ block vars
 
 block main
 	section.about
-		.container
-			+title('Об исследовании', 'about__title')
+		.container.about__container
+			+icon('pattern1')(class='about__pattern', width='440', height='1088')
+			+title('Об исследовании', 'about__title')(data-aos="fade-right")
 			+text('Эксперты проверили 1&nbsp;868 мобильных приложений российских разработчиков из&nbsp;18 категорий — от&nbsp;финтеха и&nbsp;онлайн-ритейла ' +
 			'до&nbsp;здравоохранения, образования и&nbsp;корпоративных сервисов.', 'about__text')
 			.about__cards
@@ -43,7 +44,7 @@ block main
 						защищенности мобильных приложений.
 	section.digit
 		.container
-			+title('Ключевые цифры 2024 года', 'digit__title')
+			+title('Ключевые цифры 2024 года', 'digit__title')(data-aos="fade-right")
 			+text('<b>29 952</b> уязвимости было обнаружено в <b>1 868</b> приложениях. <b>88,6%</b> мобильных приложений на платформе ' +
 			'Android имеют уязвимости высокого и критического уровня. Они могут быть использованы для взлома данных, кражи финансовой ' +
 			'информации и доступа к закрытым корпоративным системам. <br> Этот показатель на <b>33%</b> выше, чем в 2023 году.', 'digit__text')
@@ -67,8 +68,9 @@ block main
 				.digit-chart__item.digit-chart__item--4
 					span 90%
 	section.chart
-		.container
-			+title('Уязвимости по уровню критичности', 'chart__title')
+		.container.chart__container
+			+icon('pattern2')(class='chart__pattern', width='1440', height='1725')
+			+title('Уязвимости по уровню критичности', 'chart__title')(data-aos="fade-right")
 			+text('Большинство просканированных приложений содержит уязвимости, которые снижают уровень безопасности ПО&nbsp;и&nbsp;могут стать ' +
 			'входными точками для хакерских атак.',
 				'chart__text',
@@ -109,43 +111,44 @@ block main
 						<span>Уровень инфо</span> — это, скорее, замечания к&nbsp;качеству защиты. Они не несут прямой угрозы, но&nbsp;показывают,
 						что в&nbsp;безопасности приложения есть пробелы и&nbsp;зоны для улучшения.
 	section.apps
-		.container
+		.container.apps__container
+			+icon('pattern3')(class='apps__pattern', width='765', height='1861')
 			.apps__grid
 				.apps__col
-					+title('Уязвимости приложений', 'apps__title')
+					+title('Уязвимости приложений', 'apps__title')(data-aos="fade-right")
 					+text('Узнайте больше, загрузив полное исследование.', 'apps__text')
-					+button('Скачать', 'apps__button', '#')
+					+button('Скачать', 'apps__button', '#')(data-hystmodal='#formResearch')
 					.apps__block.apps__block--offset-big
 						.apps__subtitle Сервисы для&nbsp;личного использования
 						.apps__rows
 							.apps__row.apps__row--1
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps1')
 										+icon('apps1')
 									.apps__description Мессенджеры и&nbsp;нетворкинг
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps2')
 										+icon('apps2')
 									.apps__description Приложения для&nbsp;бизнеса
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps3')
 										+icon('apps3')
 									.apps__description Навигация и&nbsp;транспорт
 							.apps__row.apps__row--2
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps4')
 										+icon('apps4')
 									.apps__description Книги <br> и&nbsp;справочники
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps5')
 										+icon('apps5')
 									.apps__description Семья <br> и&nbsp;дети
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps6')
 										+icon('apps6')
 									.apps__description Здоровье <br> и&nbsp;спорт
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps7')
 										+icon('apps7')
 									.apps__description Стиль <br> жизни
 				.apps__col
@@ -154,50 +157,50 @@ block main
 						.apps__rows
 							.apps__row.apps__row--3
 								.apps__item
-									a.apps__image(href='#', data-hystmodal='#apps1')
+									a.apps__image(href='#', data-hystmodal='#apps8')
 										+icon('apps8')
 									.apps__description Финансы
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps9')
 										+icon('apps9')
 									.apps__description Онлайн-ритейл и&nbsp;маркетплейсы
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps10')
 										+icon('apps10')
 									.apps__description Доставка еды и&nbsp;продуктов
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps11')
 										+icon('apps11')
 									.apps__description СМИ
 							.apps__row.apps__row--4
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps12')
 										+icon('apps12')
 									.apps__description Образовательные платформы
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps13')
 										+icon('apps13')
 									.apps__description Стриминговые платформы
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps14')
 										+icon('apps14')
 									.apps__description Доски <br> объявлений
 							.apps__row.apps__row--5
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps15')
 										+icon('apps15')
 									.apps__description Отдых <br> и&nbsp;путешествия
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps16')
 										+icon('apps16')
 									.apps__description Букмейкерские компании
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps17')
 										+icon('apps17')
 									.apps__description Цифровые сервисы и&nbsp;телеком
 							.apps__row.apps__row--6
 								.apps__item
-									.apps__image
+									a.apps__image(href='#', data-hystmodal='#apps18')
 										+icon('apps18')
 									.apps__description Медицинские сервисы
 	section.interview
@@ -261,35 +264,102 @@ block main
 										Как выстроить в компании безопасную разработку программного обеспечения, разгрузив инженеров от рутины? Действительно
 										ли соблюдение принципа Shift + Left помогает от сдвига срока релиза продуктов вправо? На эти и другие вопросы
 										отвечает <b>Антон Башарин, старший управляющий директор AppSec Solutions</b>
-								.interview__col
-									.interview__question На ваш взгляд, принципы безопасной разработки ПО действительно уже стали нормой на российском рынке?
+									.interview__question.
+										<b>CNews: На ваш взгляд, принципы безопасной разработки ПО действительно уже стали нормой на российском рынке?</b>
 									.interview__text
 										p.
-											Первый и главный из принципов – Shift + Left, сдвиг влево, означающий, что идентифицировать проблему нужно как можно
-											раньше. Если сделать это накануне выхода релиза, а то и после него, это может очень дорого обойтись и во времени
-											на устранение уязвимостей, и в деньгах, которые придется на это потратить.
+											<b>Антон Башарин:</b> Первый и главный из принципов – Shift + Left, сдвиг влево, означающий, что идентифицировать
+											проблему нужно как можно раньше. Если сделать это накануне выхода релиза, а то и после него, это может очень дорого
+											обойтись и во времени на устранение уязвимостей, и в деньгах, которые придется на это потратить.
 										p.
 											Конечно, для внедрения этого принципа нужна внутренняя зрелость в компании. Хорошо, что в некоторых секторах,
 											особенно в финансовом, драйверами выступают внешние стимулы, например, регуляторные требования ЦБ об обязательном
 											проведении определенных процедур и проверок.
 										p.
 											Но действительно можно отметить тренд 2024-2025 годов, когда крупные промышленные компании начали переходить к
-											принципам DevSecOps без регуляторного принуждения, просто адекватно оценивая собственные риски. Например, что при
-											эффективной атаке злоумышленников через уязвимости в ПО может попросту остановиться технологический процесс, а это
-											огромные экономические издержки.
-								.interview__col
+											принципам DevSecOps без регуляторного принуждения, просто адекватно оценивая собственные риски. Например, что
+											при эффективной атаке злоумышленников через уязвимости в ПО может попросту остановиться технологический процесс,
+											а это огромные экономические издержки.
 									.interview__question.
-										Допустим, руководство компании своим решением приходит к необходимости перестроить работу по созданию ПО на принципах
-										DevSecOps. Какие процессы для этого нужно изменить и какие потребуются инструменты?
+										<b>CNews: Допустим, руководство компании своим решением приходит к необходимости перестроить работу по созданию ПО на
+											принципах DevSecOps. Какие процессы для этого нужно изменить и какие потребуются инструменты?</b>
 									.interview__text
 										p.
-											Начнем с такого процесса, как версионирование. Закончив работу над каким-то фрагментом кода, разработчик
-											делает коммит, появляется промежуточная версия, которую нужно сохранить в репозитории. Эту базовую функцию
-											обеспечивает наш продукт AppSec.Code. Конечно, он умеет не только это. В его функционале автоматическая
-											сборка, развертывание на стенде, промежуточные проверки кода с точки зрения информационной безопасности.
+											<b>Антон Башарин:</b> Начнем с такого процесса, как версионирование. Закончив работу над каким-то фрагментом кода,
+											разработчик делает коммит, появляется промежуточная версия, которую нужно сохранить в репозитории. Эту базовую функцию
+											обеспечивает наш продукт AppSec.Code. Конечно, он умеет не только это. В его функционале автоматическая сборка,
+											развертывание на стенде, промежуточные проверки кода с точки зрения информационной безопасности.
 										p.
-											Второй процесс – анализ зависимостей, то есть не собственного кода, а компонентов с открытым кодом,
-											различных фреймоворков, утилит
+											Второй процесс – анализ зависимостей, то есть не собственного кода, а компонентов с открытым кодом, различных
+											фреймоворков, утилит и так далее. Разумеется, разработчики не пишут весь код с нуля. Более того, в большом проекте
+											доля компонентов-зависимостей может составлять 90-95%.
+										p.
+											Проводить их проверку на безопасность силами ИБ-команды просто нереально. Да и не нужно, потому что для этого есть
+											AppSec.Track. У него есть база знаний, обновляемая 24/7, к которой могут обращаться разработчики клиента и
+											оперативно получать информацию, содержит ли зависимость уязвимости и если да, то какого они типа и уровня опасности.
+											В итоге с помощью AppSec.Track собирается SBOM-файл (Software Bill of Material), в котором описываются все уязвимости.
+								.interview__col
+									.interview__question.
+										<b>CNews: Отдельно стоит рассмотреть процессы, связанные с мобильными приложениями.</b>
+									.interview__text
+										p.
+											<b>Антон Башарин:</b> Да, их безопасность помогает обеспечить наш продукт «Стингрей». В каждом приложении разработчики
+											выстраивают набор политик, что приложению позволено делать, а что нет. Так, оно не должно требовать избыточных прав,
+											обращаться к несвойственным для его работы папкам в файловой системе, сохранять секреты только в закрытых областях,
+											то есть, например, не сохранять пин-ког и пароль в областях памяти, к которым могут иметь доступ другие приложения
+											и т.д. Необходимо выявлять нарушение таких политик как в поле зависимостей, так и в поле собственного кода.
+										p.
+											После сборки приложение начинает напоминать «черный ящик», в том числе, и с точки зрения вопросов информационной
+											безопасности. А «Стингрей» приоткрывает этот ящик, эмулирует работу приложения в Android или непосредственно
+											запуская его в iOS. Тесты как раз позволяют выявить проблемы в ИБ, которые должны решать разработчики.
+									.interview__question.
+										<b>CNews: А процесс безопасной разработки?</b>
+									.interview__text
+										p.
+											<b>Антон Башарин:</b> Да, он тоже нуждается в комплексном управлении. Это позволяет делать AppSec.Hub. В крупной
+											организации может быть 100 репозиториев исходного кода, и это норма, а далеко не максимум. В то же время на рынке
+											(и в портфеле AppSec. Solutions) есть десять типов сканеров, и в каждом типе их может быть не по одному.
+										p.
+											Каждый сканер хорош именно в своей области. И вот это разнообразие инструментов накладывается на огромные объемы
+											кода, выявляются в буквальном смысле тысячи и десятки тысяч уязвимостей. Работать с такими данными в ручном
+											режиме невозможно. Да и не нужно – ведь для этого есть AppSec.Hub.
+										p.
+											Он позволяет подключать разные типы сканеров, консолидировать информацию о всех уязвимостях и выполнять их
+											автоматический разбор. На практике до 90% срабатываний сканеров могут быть ложноположительными, и в половине
+											случаев это вполне позволяет определить автоматика.
+									.interview__question.
+										<b>CNews: Своего рода «второй пилот» инженера?</b>
+									.interview__text
+										p.
+											<b>Антон Башарин:</b> Да, на базе наших собственных разработок в сфере искусственного интеллекта. Без его помощи
+											ручной труд ИБ-инженеров становится «бутылочным горлышком», которое тормозит работу всей команды. Ведь, как
+											правило, один ИБ-инженер приходится на сто, а то и на тысячу разработчиков.
+								.interview__col
+									.interview__question.
+										<b>CNews: Продукт полезен на уровне разработчиков, но выстраивание процессов, в том числе бизнес-процессов – прерогатива
+										менеджеров, руководства. Чем им может пригодиться AppSec. Hub?</b>
+									.interview__text
+										p.
+											<b>Антон Башарин:</b> Мы очень много работали над представлением данных, над их визуализацией, и в итоге получился
+											очень информативный и адаптивный дашборд.
+										p.
+											Он позволяет отслеживать важнейшие метрики в области информационной безопасности. Делает срез текущего состояния,
+											комплексный анализ технического долга, на котором видно количество, структура и уровень критичности уязвимостей
+											в релизах, которые уже вышли в эксплуатацию. И даже позволяет его соотнести с требованиям комплаенса. Например,
+											в сфере финансов действуют установленные Банком России так называемые уровни доверия, и только при ОУД-4 и выше
+											ваш продукт можно выводить на рынок.
+										p.
+											Кроме текущего состояния, можно анализировать тренд, сокращается ли техдолг или растет. И уже понимая этот тренд,
+											можно выяснить, почему так происходит, что нужно изменить, донастроить в работе команды, в процессах.
+									.interview__question.
+										<b>CNews: Предположим, руководитель компании дочитал наше интервью до этого момента и твердо принял решение
+										сделать Shift + left. Сколько времени требуется для выстраивания процессов?</b>
+									.interview__text
+										p.
+											<b>Антон Башарин:</b> Если мы выходим в «чистое поле», все просто. С нуля благодаря нашему опыту и нашим
+											решениям выстроить процессы безопасной разработки вполне реально за несколько недель. Когда в компании уже
+											сформированы процессы обеспечения информационной безопасности, часто неэффективные, перестроить ее работу
+											сложнее, но, безусловно, тоже реально.
 				.interview__nav.swiper-nav
 					.swiper-btn-prev
 						+icon('chevron-left')
@@ -297,7 +367,7 @@ block main
 						+icon('chevron-right')
 	section.opinion
 		.container
-			+title('Есть мнение', 'title--big opinion__title')
+			+title('Есть мнение', 'title--big opinion__title')(data-aos="fade-right")
 			.opinion__slider.swiper
 				.swiper-wrapper
 					.opinion__slide.swiper-slide
@@ -343,21 +413,22 @@ block main
 	section.research
 		.container.container--big
 			.research__window
-				+icon('research-pattern')(class='research__bg')
 				.container.research__container
 					.research__content
-						+title('Читайте в исследовании', 'title--big research__title')
+						+title('Читайте в исследовании', 'title--big research__title')(data-aos="fade-right")
 						ul.research__list
 							li Возможные векторы атак: данные о типах киберугроз и&nbsp;распространенности возможных уязвимостях
 							li Уязвимости: описание рисков для&nbsp;безопасности мобильных приложений и&nbsp;их критичности
 							li Рекомендации по устранению: рекомендации экспертов для эффективной защиты от&nbsp;релевантных угроз
 							li Детальные выводы
-						+button('Скачать', 'button--white research__button', '#')
+						+button('Скачать', 'research__button', '#')(data-hystmodal='#formResearch')
 					.research__image-wrapper
 						+picture('research', 'png', 'research__image', '')
 	section.video
-		.container
-			+title('Защищайте мобильные приложения — <br> защищайте свой бизнес', 'title--big video__title')
+		.container.video__container
+			+icon('pattern5')(class='video__pattern-1', width='441', height='665')
+			+icon('pattern4')(class='video__pattern-2', width='292', height='947')
+			+title('Защищайте мобильные приложения — <br> защищайте свой бизнес', 'title--big video__title')(data-aos="fade-right")
 			+text('Главная тенденция в мобильной безопасности сегодня — переход от формального подхода к построению комплексной стратегии ' +
 			'защиты. Она включает риск-ориентированное управление, динамический анализ приложений в реальных условиях эксплуатации, ' +
 			'мониторинг аномалий и учет контекстных факторов: чувствительности данных, требований законодательства и географии пользователей.',
@@ -426,3 +497,488 @@ block modals
 						.modal__list-item
 							p(style='color: #16abff') 223
 							p <span style='color: #16abff'>info</span> уровня
+	#apps2.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps3.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps4.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps5.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps6.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps7.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps8.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps9.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps10.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps11.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps12.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps13.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps14.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps15.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps16.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps17.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#apps18.hystmodal(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.modal
+					.modal__title Финансы
+					.modal__result
+						.modal__result-text Просканировано <br> <span>1 583</span> приложения
+						.modal__image
+							+icon('apps8')
+					.modal__subtitle Найдено уязвимостей
+					.modal__list
+						.modal__list-item
+							p(style='color: #540339') 53
+							p <span style='color: #540339'>критического</span> уровня
+						.modal__list-item
+							p(style='color: #fe012e') 516
+							p <span style='color: #fe012e'>высокого</span> уровня
+						.modal__list-item
+							p(style='color: #f06020') 595
+							p <span style='color: #f06020'>среднего</span> уровня
+						.modal__list-item
+							p(style='color: #344bfd') 196
+							p <span style='color: #344bfd'>низкого</span> уровня
+						.modal__list-item
+							p(style='color: #16abff') 223
+							p <span style='color: #16abff'>info</span> уровня
+	#formResearch.hystmodal.hystmodal--form(aria-hidden='true')
+		.hystmodal__wrap
+			.hystmodal__window(role='dialog', aria-modal='true')
+				button.hystmodal__close(data-hystclose)
+					+icon('close')(width='30', height='30')
+				.form
+					.form__title Скачать <br> исследование
+					.form__wrapper
+						script(type='text/javascript' src='https://www.cnews.ru/inc/form/viewform.php?id=2566&embedded=js' charset='UTF-8')
