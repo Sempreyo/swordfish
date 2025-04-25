@@ -3,7 +3,7 @@ header.header
 		a.header__logo.header__logo--appsec(href='#', target='_blank')
 			+icon('logo-appsec')
 		.header__right
-			a.header__logo.header__logo--stingrey(href='#', target='_blank')
+			a.header__logo.header__logo--stingrey.header__logo--desktop(href='#', target='_blank')
 				+picture('logo-stingrey', 'png', '', '')
 			a.header__logo.header__logo--cnews(href='#', target='_blank')
 				+icon('logo-cnews')
@@ -19,6 +19,8 @@ header.header
 					p.
 						Компания AppSec Solutions провела ежегодное исследование защищенности мобильных приложений российских разработчиков.
 			.hero__image-wrapper
+				a.header__logo.header__logo--stingrey.header__logo--mobile(href='#', target='_blank')
+					+picture('logo-stingrey', 'png', '', '')
 				.hero__light.hidden
 					+icon('light')
 				+picture('hero', 'png', '', '')

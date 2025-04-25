@@ -1,18 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const interviewCarousel = document.querySelectorAll(".interview__slider");
+	const interviewCarousel = document.querySelectorAll(".interview__slider .swiper");
 
 	if (interviewCarousel.length > 0) {
 		interviewCarousel.forEach(el => {
-			const interviewCarouselNext = el.querySelector(".swiper-btn-next");
-			const interviewCarouselPrev = el.querySelector(".swiper-btn-prev");
+			const interviewCarouselNext = el.closest(".interview__slider").querySelector(".swiper-btn-next");
+			const interviewCarouselPrev = el.closest(".interview__slider").querySelector(".swiper-btn-prev");
 
 			const slider = new Swiper(el, {
 				slidesPerView: 1,
-				spaceBetween: 10,
-				autoHeight: true,
+				spaceBetween: 40,
 				navigation: {
 					nextEl: interviewCarouselNext,
 					prevEl: interviewCarouselPrev,
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2
+					},
+					992: {
+						slidesPerView: 3,
+						autoHeight: false
+					},
+				},
+				keyboard: {
+					enabled: true,
+					onlyInViewport: true
 				}
 			});
 		});
@@ -26,8 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			const slider = new Swiper(el, {
 				slidesPerView: 1,
-				initialSlide: 1,
-				centeredSlides: true,
 				spaceBetween: 8,
 				pagination: {
 					el: opinionCarouselPagination,
@@ -36,8 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				breakpoints: {
 					1280: {
 					  slidesPerView: "auto",
-					  spaceBetween: 50
+					  spaceBetween: 50,
+						centeredSlides: true,
+						initialSlide: 1
 					},
+				},
+				keyboard: {
+					enabled: true,
+					onlyInViewport: true
 				}
 			});
 		});

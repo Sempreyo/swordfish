@@ -13,7 +13,12 @@
 	transition: opacity 0.3s ease;
 	cursor: pointer;
 
+	@include max(1550) {
+		left: 96%;
+	}
+
 	@include max(tl) {
+		left: 88.7%;
 		bottom: 15px;
 	}
 

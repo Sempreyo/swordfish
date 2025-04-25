@@ -58,11 +58,22 @@
 
 		@include max(ti) {
 			max-width: 100%;
+			margin-top: 25px;
 		}
 
-		img {
+		&--desktop {
+			display: block;
+
 			@include max(ti) {
-				margin: 0 auto;
+				display: none;
+			}
+		}
+
+		&--mobile {
+			display: none;
+
+			@include max(ti) {
+				display: block;
 			}
 		}
 	}

@@ -32,6 +32,7 @@
 		font-size: 45px;
 		line-height: 1.2;
 		overflow: hidden;
+		opacity: 0;
 
 		@include max(d) {
 			font-size: fluid(38, 45, 992, 1280);
@@ -82,7 +83,7 @@
 		}
 
 		@include max(tl) {
-			margin-top: 0;
+			margin-top: 20px;
 			margin-bottom: -70px;
 		}
 
@@ -137,7 +138,21 @@
 		}
 
 		@include max(tl) {
-			display: none;
+			top: -45px;
+			left: 65px;
+			transform: rotate(-5deg);
+		}
+
+		@include max(ti) {
+			top: -23px;
+			left: 35px;
+			transform: rotate(-3deg);
+		}
+
+		@include max(t) {
+			top: 17px;
+			left: 18px;
+			transform: rotate(0);
 		}
 
 		&.hidden {
@@ -147,6 +162,11 @@
 		svg {
 			width: 100%;
 			height: 100%;
+
+			@include max(tl) {
+				width: 1000px;
+				height: 1055px;
+			}
 		}
 	}
 }

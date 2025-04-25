@@ -1,14 +1,18 @@
 .video {
 	$parent: &;
 
-	padding: 55px 0 0;
+	padding: 55px 0 44px;
 
 	@include max(ti) {
-		padding: 40px 0 0;
+		padding: 40px 0 20px;
 	}
 
 	&__container {
 		position: relative;
+	}
+
+	&__pattern-1-wrapper {
+
 	}
 
 	&__pattern-1 {
@@ -20,6 +24,19 @@
 		@include max(ti) {
 			display: none;
 		}
+
+		&::after {
+			@include min(1440) {
+				content: "";
+				display: block;
+				width: 30vw;
+				height: 50px;
+				background-color: rgba(#1f4cca, 0.03);
+				position: absolute;
+				right: 100%;
+				bottom: 5px;
+			}
+		}
 	}
 
 	&__pattern-2 {
@@ -27,6 +44,19 @@
 		top: -10%;
 		left: 90%;
 		z-index: -1;
+
+		&::after {
+			@include min(1440) {
+				content: "";
+				display: block;
+				width: 30vw;
+				height: 50px;
+				background-color: rgba(#1f4cca, 0.03);
+				position: absolute;
+				left: 100%;
+				bottom: 5px;
+			}
+		}
 	}
 
 	&__text {
@@ -73,7 +103,7 @@
 		border-radius: 15px;
 		overflow: hidden;
 		width: 100%;
-		aspect-ratio: 15/8;
+		aspect-ratio: 16/9;
 
 		video {
 			position: absolute;
@@ -136,6 +166,12 @@
 
 		&::after {
 			animation: pulse 2.5s linear infinite;
+		}
+
+		img {
+			width: 13px;
+			height: 16px;
+			margin-left: 4px;
 		}
 	}
 }

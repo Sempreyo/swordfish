@@ -72,7 +72,6 @@
 		}
 
 		@include max(t) {
-			max-width: 250px;
 			font-size: 16px;
 			text-align: center;
 		}
@@ -90,6 +89,10 @@
 
 		@include max(t) {
 			font-size: 14px;
+		}
+
+		p + p {
+			margin-top: 8px;
 		}
 	}
 }

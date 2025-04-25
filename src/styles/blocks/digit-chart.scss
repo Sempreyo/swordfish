@@ -10,38 +10,11 @@
 		padding: 130px 0;
 	}
 
-	&--desktop {
-		@include max(ti) {
-			padding: 130px 0 0;
-		}
-
-		#{$parent} {
-			&__item {
-				&--2,
-				&--4,
-				&--5 {
-					@include max(ti) {
-						display: none;
-					}
-				}
-			}
-		}
-	}
-
-	&--mobile {
-		display: none;
-
-		@include max(ti) {
-			display: flex;
-			padding: 0;
-		}
-
-		&:last-child {
-			@include max(ti) {
-				display: flex;
-				padding: 0 0 80px;
-			}
-		}
+	@include max(ti) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 0;
 	}
 
 	&__item {
@@ -64,6 +37,7 @@
 
 		@include max(ti) {
 			font-size: 25px;
+			margin-left: 0;
 		}
 
 		span {
@@ -84,15 +58,15 @@
 			text-align: center;
 
 			@include max(tl) {
-				font-size: 14px;
-			}
-
-			@include max(ti) {
 				font-size: 12px;
 			}
 
-			@include max(t) {
-				font-size: 10px;
+			@include max(ti) {
+				font-size: 14px;
+			}
+
+			@include max(400) {
+				font-size: 12px;
 			}
 		}
 
@@ -129,13 +103,37 @@
 				width: 173px;
 			}
 
+			@include max(ti) {
+				width: 180px;
+			}
+
+			@include max(t) {
+				width: 150px;
+			}
+
+			@include max(400) {
+				width: 100px;
+			}
+
 			&::before {
 				content: "вероятность взлома Android-приложений";
 				bottom: calc(100% + 70px);
 
 				@include max(ti) {
-					width: 90%;
-					bottom: calc(100% + 35px);
+					text-align: left;
+					width: 300px;
+					bottom: unset;
+					left: calc(100% + 40px);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				@include max(t) {
+					width: 150px;
+				}
+
+				@include max(400) {
+					width: 130px;
 				}
 			}
 
@@ -146,7 +144,12 @@
 				background-color: #4931ff;
 
 				@include max(ti) {
-					height: 25px;
+					bottom: unset;
+					left: 100%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 25px;
+					height: 1px;
 				}
 			}
 		}
@@ -159,13 +162,38 @@
 				width: 145px;
 			}
 
+			@include max(ti) {
+				width: 180px;
+			}
+
+			@include max(t) {
+				width: 150px;
+			}
+
+			@include max(400) {
+				width: 100px;
+			}
+
 			&::before {
 				content: "прирост числа обнаруженных уязвимостей за год с 2023 г.";
 				top: calc(100% + 75px);
 				width: calc(100% + 60px);
 
 				@include max(ti) {
-					top: calc(100% + 35px);	
+					text-align: left;
+					width: 300px;
+					bottom: unset;
+					left: calc(100% + 40px);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				@include max(t) {
+					width: 150px;
+				}
+
+				@include max(400) {
+					width: 130px;
 				}
 			}
 
@@ -176,7 +204,12 @@
 				background-color: #369eff;
 
 				@include max(ti) {
-					height: 25px;
+					bottom: unset;
+					left: 100%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 25px;
+					height: 1px;
 				}
 			}
 		}
@@ -190,14 +223,38 @@
 				width: 202px;
 			}
 
+			@include max(ti) {
+				width: 180px;
+			}
+
+			@include max(t) {
+				width: 150px;
+			}
+
+			@include max(400) {
+				width: 100px;
+			}
+
 			&::before {
 				content: "мобильных приложений российских разработчиков содержат уязвимости высокого и критического уровня";
 				bottom: calc(100% + 70px);
 				width: calc(100% + 60px);
 
 				@include max(ti) {
-					width: 90%;
-					bottom: calc(100% + 35px);
+					text-align: left;
+					width: 300px;
+					bottom: unset;
+					left: calc(100% + 40px);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				@include max(t) {
+					width: 150px;
+				}
+
+				@include max(400) {
+					width: 130px;
 				}
 			}
 
@@ -208,7 +265,12 @@
 				background-color: #00b2ff;
 
 				@include max(ti) {
-					height: 25px;
+					bottom: unset;
+					left: 100%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 25px;
+					height: 1px;
 				}
 			}
 		}
@@ -221,13 +283,38 @@
 				width: 217px;
 			}
 
+			@include max(ti) {
+				width: 180px;
+			}
+
+			@include max(t) {
+				width: 150px;
+			}
+
+			@include max(400) {
+				width: 100px;
+			}
+
 			&::before {
 				content: "приложений уязвимы к запуску в\a0условиях динамического анализа";
 				top: calc(100% + 75px);
 				width: calc(100% + 20px);
 
 				@include max(ti) {
-					top: calc(100% + 35px);
+					text-align: left;
+					width: 300px;
+					bottom: unset;
+					left: calc(100% + 40px);
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				@include max(t) {
+					width: 150px;
+				}
+
+				@include max(400) {
+					width: 130px;
 				}
 			}
 
@@ -238,7 +325,12 @@
 				background-color: #1f4cca;
 
 				@include max(ti) {
-					height: 25px;
+					bottom: unset;
+					left: 100%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 25px;
+					height: 1px;
 				}
 			}
 		}
@@ -251,18 +343,38 @@
 				width: 173px;
 			}
 
+			@include max(ti) {
+				width: 180px;
+			}
+
+			@include max(t) {
+				width: 150px;
+			}
+
+			@include max(400) {
+				width: 100px;
+			}
+
 			&::before {
 				content: "содержат зашитые в код ключи доступа и учетные данные";
 				bottom: calc(100% + 70px);
 				width: calc(100% + 60px);
 
 				@include max(ti) {
-					max-width: 120px;
-					width: 90%;
+					text-align: left;
+					width: 300px;
 					bottom: unset;
+					left: calc(100% + 40px);
 					top: 50%;
 					transform: translateY(-50%);
-					left: 100%;
+				}
+
+				@include max(t) {
+					width: 150px;
+				}
+
+				@include max(400) {
+					width: 130px;
 				}
 			}
 
@@ -273,7 +385,12 @@
 				background-color: #6873f1;
 
 				@include max(ti) {
-					display: none;	
+					bottom: unset;
+					left: 100%;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 25px;
+					height: 1px;
 				}
 			}
 		}

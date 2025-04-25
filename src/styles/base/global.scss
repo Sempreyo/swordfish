@@ -70,6 +70,9 @@ body {
 main {
 	position: relative;
 	z-index: 1;
+}
+
+.main-outer {
 	overflow: hidden;
 }
 
@@ -228,6 +231,11 @@ ol {
 		&:not(.swiper-button-disabled):hover {
 			background-color: rgba($color-blue, 0.7);
 		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	.swiper-button-disabled {
@@ -289,7 +297,7 @@ ol {
 .ss-form-item input {
 	width: 100%;
 	border: 1px solid $color-main;
-	padding: 31px 20px 28px;
+	padding: 15px 20px;
 	background-color: $white;
 	border-radius: 10px;
 	color: $color-main;
@@ -367,6 +375,10 @@ ol {
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: 0.3s ease;
+
+	@include max(t) {
+		padding: 15px 20px;
+	}
 
 	&:hover {
 		background-color: $color-blue;

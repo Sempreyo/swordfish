@@ -5,7 +5,7 @@
 		font-size: 40px;
 		font-weight: 600;
 		text-align: center;
-		padding: 51px 10px 40px;
+		padding: 51px 10px 20px;
 
 		@include max(ti) {
 			font-size: 32px;
@@ -22,10 +22,10 @@
 		justify-content: space-between;
 		gap: 20px;
 		background-color: $color-card;
-		padding: 46px 50px;
+		padding: 25px 50px;
 
 		@include max(ti) {
-			padding: 25px 20px;
+			padding: 15px 20px;
 		}
 	}
 
@@ -49,15 +49,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 100px;
-		height: 100px;
+		width: 80px;
+		height: 80px;
+		padding: 10px;
 		border-radius: 10px;
 		background-color: $color-blue;
 
 		@include max(t) {
 			width: 60px;
 			height: 60px;
-			padding: 10px;
 		}
 
 		svg {
@@ -69,11 +69,11 @@
 	&__subtitle {
 		font-size: 30px;
 		text-align: center;
-		padding: 30px 10px 0;
+		padding: 20px 10px 0;
 
 		@include max(ti) {
 			font-size: 24px;
-			padding: 25px 20px 0;
+			padding: 20px 20px 0;
 		}
 
 		@include max(t) {
@@ -85,10 +85,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		padding: 35px 50px 50px;
+		padding: 10px 50px 50px;
 
 		@include max(ti) {
-			padding: 25px 20px;
+			padding: 10px 20px 30px;
 		}
 	}
 
@@ -102,13 +102,13 @@
 		}
 
 		@include max(t) {
-			width: 200px;
+			width: 300px;
 		}
 
 		p {
 			&:first-child {
-				min-width: 285px;
-				font-size: 100px;
+				min-width: 260px;
+				font-size: 75px;
 				line-height: 1.21;
 				font-weight: 600;
 
@@ -118,7 +118,7 @@
 				}
 
 				@include max(t) {
-					min-width: 100px;
+					min-width: 120px;
 					font-size: 40px;
 				}
 			}

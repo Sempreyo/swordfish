@@ -16,11 +16,6 @@
 		gap: 20px;
 		transition: transform 0.3s ease;
 
-		@include max(t) {
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-
 		&.hidden {
 			transform: translateY(calc(-100% - 53px));
 		}
@@ -32,6 +27,10 @@
 		justify-content: space-between;
 		gap: 20px;
 		width: 45%;
+
+		@include max(tl) {
+			justify-content: flex-end;
+		}
 
 		@include max(ti) {
 			width: auto;
@@ -48,6 +47,22 @@
 		svg {
 			width: 100%;
 			height: 100%;
+		}
+
+		&--desktop {
+			display: block;
+
+			@include max(tl) {
+				display: none;
+			}
+		}
+
+		&--mobile {
+			display: none;
+
+			@include max(tl) {
+				display: block;
+			}
 		}
 
 		&--appsec {

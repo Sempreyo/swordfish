@@ -1,14 +1,39 @@
 .products {
-	padding: 64px 0 0;
+	position: sticky;
+	z-index: 10;
+	padding: 20px 0;
+	transition: 0.3s ease;
 
 	@include max(ti) {
-		padding: 40px 0 0;
+		padding: 20px 0;
+	}
+
+	&.bgcolor {
+		background-color: $white;
+		box-shadow: 4px -4px 8px 0px rgba($color-main, 0.2);
+	}
+
+	&__container {
+		padding: 0 20px;
+
+		@include max(1550) {
+			padding: 0 50px;
+		}
+
+		@include max(t) {
+			padding: 0 15px;
+		}
 	}
 
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		gap: 16px;
+		margin: 0 -30px;
+
+		@include max(d) {
+			margin: 0;
+		}
 
 		@include max(tl) {
 			grid-template-columns: repeat(3, 1fr);

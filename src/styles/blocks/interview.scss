@@ -11,21 +11,11 @@
 		position: relative;
 		border-radius: 10px;
 		background-color: $color-card;
-
-		@include max(tl) {
-			padding-bottom: 100px;
-		}
+		overflow: hidden;
+		padding: 20px 0 115px;
 
 		@include max(ti) {
-			padding-bottom: 60px;
-		}
-	}
-
-	&__slide {
-		padding: 48px 0;
-
-		@include max(ti) {
-			padding: 20px 0;
+			padding: 20px 0 80px;
 		}
 	}
 
@@ -33,9 +23,11 @@
 		display: flex;
 		align-items: center;
 		gap: 26px;
+		margin-bottom: 27px;
 
 		@include max(ti) {
 			gap: 15px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -59,7 +51,7 @@
 		}
 	}
 
-	&__grid {
+	/*&__grid {
 		display: grid;
 		grid-template-columns: 1.3fr 1fr 1fr;
 		gap: 40px;
@@ -73,7 +65,7 @@
 		@include max(ti) {
 			margin-top: 20px;
 		}
-	}
+	}*/
 
 	&__col {
 		&:first-child {
@@ -85,7 +77,7 @@
 	}
 
 	&__title {
-		font-size: 26px;
+		font-size: 24px;
 		font-weight: 700;
 
 		@include max(ti) {
@@ -100,21 +92,19 @@
 	&__person-wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 27px;
-		margin: 26px 0 20px;
+		gap: 15px;
+		margin: 15px 0;
 
 		@include max(tl) {
 			flex-direction: row-reverse;
 			justify-content: flex-end;
 			align-items: center;
-			gap: 27px;
 		}
 
 		@include max(t) {
 			flex-direction: column-reverse;
 			justify-content: center;
 			align-items: center;
-			gap: 15px;
 		}
 	}
 
@@ -182,7 +172,7 @@
 	}
 
 	&__nav {
-		bottom: 70px;
+		bottom: 24px;
 		right: 100px;
 
 		@include max(tl) {

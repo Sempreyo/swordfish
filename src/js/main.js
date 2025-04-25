@@ -2,7 +2,6 @@
 //= ./../../node_modules/swiper/swiper-bundle.min.js
 //= ./libs/splittype.min.js
 //= ./libs/hystmodal.min.js
-//= ./libs/aos.js
 
 /* Common */
 //= ./partials/swiper-init.js
