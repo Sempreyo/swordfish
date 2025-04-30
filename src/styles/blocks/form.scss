@@ -10,7 +10,28 @@
 
 	@include max(t) {
 		padding: 0;
+		border-radius: 0;
 		border: 0;
+	}
+
+	&--policy {
+		overflow: hidden;
+		padding: 0;
+	}
+
+	&__scroll {
+		max-height: 400px;
+		font-size: 13px;
+		padding: 30px 15px;
+		overflow-y: auto;
+
+		@include max(ti) {
+			padding: 20px 10px;
+		}
+
+		@include max(t) {
+			padding: 0;
+		}
 	}
 
 	&__title {
@@ -42,5 +63,22 @@
 
 	&__wrapper {
 		margin-top: 15px;
+	}
+
+	&__policy-link {
+		color: $color-placeholder;
+		font-size: 13px;
+		font-weight: 500;
+		margin-top: 15px;
+
+		a {
+			color: $color-placeholder;
+			text-decoration: underline;
+			text-underline-offset: 3px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }

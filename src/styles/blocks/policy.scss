@@ -1,0 +1,46 @@
+.policy {
+	$parent: &;
+
+	&__content {
+		margin-bottom: 20px;
+		font-size: 15px;
+		font-weight: 700;
+
+		p + p {
+			margin-top: 5px;
+		}
+
+		a {
+			display: inline-block;
+			transition: 0.3s ease;
+
+			&:hover {
+				color: $color-title;
+			}
+		}
+	}
+
+	&__block + #{$parent}__block {
+		margin-top: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	ul,
+	p {
+		padding-left: 10px;
+	}
+
+	ul {
+		margin: 10px 0;
+
+		li + li {
+			margin-top: 10px;
+		}
+	}
+}
