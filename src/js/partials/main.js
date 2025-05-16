@@ -1,7 +1,42 @@
 document.addEventListener("DOMContentLoaded", () => {
+	/* Модалки с поворотом карточек */
 	const modals = new HystModal({
 		linkAttributeName: "data-hystmodal",
+		beforeOpen: function(modal) {
+			const closeButton = modal.element.querySelector(".hystmodal__close");
+			const formWrapper = modal.element.querySelector(".form");
+
+			if (formWrapper && !formWrapper.classList.contains("rotate")) {
+				modal.element.querySelector(".hystmodal__close").setAttribute("hidden", true);
+			}
+
+			if (formWrapper && modal.starter !== null) {
+				formWrapper.style.transition = "unset";
+				formWrapper.classList.add("rotate");
+			}
+		}
 	});
+
+	const readMoreButton = document.querySelector(".form__front");
+
+	if (readMoreButton) {
+		readMoreButton.addEventListener("click", (e) => {
+			const closeButton = e.currentTarget.closest(".hystmodal__window").querySelector(".hystmodal__close");
+			const formWrapper = e.currentTarget.closest(".form");
+
+			formWrapper.classList.add("rotate");
+			setTimeout(() => {
+				closeButton.removeAttribute("hidden");
+			}, 500);
+		});
+	}
+
+	/* Открываем модалку с формой спустя 3 секунды на странице */
+	setTimeout(() => {
+		if (modals.openedModals.length === 0) {
+			modals.open("#formResearch");
+		}
+	}, 3000);
 
 	/* Добавляем кастомное свойство для анимированного прогрессбара в круговой диаграмме */
 	window.CSS.registerProperty({

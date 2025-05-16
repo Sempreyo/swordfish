@@ -1049,6 +1049,9 @@ block modals
 				button.hystmodal__close(data-hystclose)
 					+icon('close')(width='30', height='30')
 				.form
-					.form__title Скачать <br> исследование
-					.form__wrapper
-						script(type='text/javascript' src='https://www.cnews.ru/inc/form/viewform.php?id=2566&embedded=js' charset='UTF-8')
+					button.form__front
+						img.form__bg(src='../images/form-back.jpg', alt='')
+					.form__back
+						.form__title Скачать <br> исследование
+						.form__wrapper
+							script(type='text/javascript' src='https://www.cnews.ru/inc/form/viewform.php?id=2566&embedded=js' charset='UTF-8')
