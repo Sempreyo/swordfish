@@ -1,8 +1,3 @@
-/* Libs */
-//= ./../../node_modules/swiper/swiper-bundle.min.js
-//= ./libs/splittype.min.js
-//= ./libs/hystmodal.min.js
-
 /* Common */
 //= ./partials/swiper-init.js
 //= ./partials/header.js

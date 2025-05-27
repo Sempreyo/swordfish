@@ -314,12 +314,17 @@ ol {
 		color: $color-placeholder;
 		font-family: $mainFont;
 		font-size: 15px;
+		line-height: 1;
 	}
 
 	&:hover,
 	&:focus {
 		border-color: $color-blue;
 	}
+}
+
+.ss-form-item input[id="item_8083382"]::placeholder {
+	font-size: 12px;
 }
 
 .ss-item-type-checkbox label {

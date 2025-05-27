@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			anchor.addEventListener('click', function (e) {
 				e.preventDefault();
 
-				if (window.location.hash) {
-					document.querySelector(window.location.hash).scrollIntoView({
-						behavior: 'smooth'
-					});
-				}
+				document.querySelector(`${anchor.getAttribute("href")}`).scrollIntoView({
+					behavior: 'smooth'
+				});
 			});
 		});
 	}

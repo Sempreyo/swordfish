@@ -113,15 +113,11 @@
 	&__scroll {
 		max-height: 400px;
 		font-size: 13px;
-		padding: 30px 15px;
+		padding: 45px 15px 30px;
 		overflow-y: auto;
 
 		@include max(ti) {
-			padding: 20px 10px;
-		}
-
-		@include max(t) {
-			padding: 0;
+			padding: 45px 10px 20px;
 		}
 	}
 

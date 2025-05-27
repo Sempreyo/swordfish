@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+	const urlParams = new URLSearchParams(window.location.search);
+	const modalParam = urlParams.get('modal');
+
 	/* Модалки с поворотом карточек */
 	const modals = new HystModal({
 		linkAttributeName: "data-hystmodal",
@@ -6,16 +9,24 @@ document.addEventListener("DOMContentLoaded", () => {
 			const closeButton = modal.element.querySelector(".hystmodal__close");
 			const formWrapper = modal.element.querySelector(".form");
 
-			if (formWrapper && !formWrapper.classList.contains("rotate")) {
-				modal.element.querySelector(".hystmodal__close").setAttribute("hidden", true);
-			}
+			if (modal.element.id === "formResearch") {
+				if (formWrapper && !formWrapper.classList.contains("rotate")) {
+					closeButton.setAttribute("hidden", "true");
+				}
 
-			if (formWrapper && modal.starter !== null) {
-				formWrapper.style.transition = "unset";
-				formWrapper.classList.add("rotate");
+				if (formWrapper && modal.starter !== null || modalParam) {
+					formWrapper.style.transition = "unset";
+					formWrapper.classList.add("rotate");
+					closeButton.removeAttribute("hidden");
+				}
 			}
 		}
 	});
+
+	/* Открыть нужную модалку по урлу */
+	if (modalParam) {
+		modals.open('#' + modalParam);
+	}
 
 	const readMoreButton = document.querySelector(".form__front");
 
